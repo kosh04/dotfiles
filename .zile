@@ -1,0 +1,26 @@
+;; .zile -- user's Zile init file    -*- lisp -*-
+
+;; see also
+;; - src/dotzile-extra.el
+;; - src/bind.c
+;; - src/tbl_funcs.h
+;; - src/tbl_vars.h
+
+;; XXX: Zile cannot translate CRLF into Newline?
+
+;; Variables
+(setq ring-bell nil)
+(setq make-backup-files nil)
+
+; Rebind keys
+; (global-set-key "key" 'func)
+
+; Better bindings for when backspace generates C-h
+;(global-set-key "\BACKSPACE"  'backward-delete-char)
+(global-set-key "\C-h"        'backward-delete-char)
+
+(global-set-key "\F1c" 'describe-key)
+(global-set-key "\C-x[" 'beginning-of-buffer)
+(global-set-key "\C-x]" 'end-of-buffer)
+
+;; eof

@@ -1,0 +1,10 @@
+# File: .inputrc
+# URL: https://www.gnu.org/software/bash/manual/html_node/Readline-Init-File.html
+# Usage: $include .inputrc
+
+set completion-ignore-case on
+set blink-matching-paren on
+
+set convert-meta off
+set output-meta on
+set meta-flag on

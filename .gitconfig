@@ -1,0 +1,23 @@
+# Usage:
+# [include]
+#       path = ~/path/to/.gitconfig
+# Manual:
+#   - man git-config
+#   - http://git-scm.com/docs/git-config#_includes
+
+[alias]
+        alias = config --get-regexp '^alias\\.'
+	graph = log --graph --oneline --decorate=full
+        rename = mv
+        st = status -sb
+        pushf = push --force-with-lease
+	gr = log --graph --date=short --decorate=short --pretty=format:'%Cgreen%h %Creset%cd %Cblue%cn %Cred%d %Creset%s'
+[core]
+        pager = less -r
+        symlinks = true
+# [pager]
+#         log  = diff-highlight | less
+#         show = diff-highlight | less
+#         diff = diff-highlight | less
+[color]
+	ui = auto
