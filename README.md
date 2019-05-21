@@ -1,22 +1,30 @@
-## dotfiles
+## dotfiles [![Build Status](https://travis-ci.com/kosh04/dotfiles.svg?token=dfMzF3xay83G8zNxrhrj&branch=master)](https://travis-ci.com/kosh04/dotfiles)
 
-`.emacs.d` はこちら https://github.com/kosh04/.emacs.d
-
-## やりたいこと
-
-- `$HOME` 以下に散らかった設定ファイルの一元管理
+`$HOME` 以下に散らかった設定ファイルを一元管理したい
 
 各種設定の適用方法はいくつかある
 
-- シンボリックリンクを貼る
-- 環境変数でパス名を指定する
-- Include ディレクティブを指定する
+- シンボリックリンクを貼る e.g. `ln -s SRC DST`
+- 環境変数でパス名を指定する e.g. `LESSHISTFILE=$HOME/.cache/.lesshst`
+- Include ディレクティブを指定する e.g. `$include ~/dotfiles/.inputrc`
+
+## Environment
+
+- Windows (Cygwin, WSL)
+- macOS
+- Linux (Debian)
 
 ## Install (TODO)
 
 ```
 $ git clone https://github.com/kosh04/dotfiles.git ~/dotfiles
 $ make -C dotfiles
+```
+
+あるいは
+
+```
+$ curl https://github.com/kosh04/dotfiles/raw/master/bootstrap.sh | sh
 ```
 
 ## bin/?
@@ -39,6 +47,7 @@ XDG_DATA_DIRS  =/usr/local/share:/usr/share
 XDG_CONFIG_DIRS=/etc/xdg
 ```
 
-## Other Link
+## Other Links
 
+- https://github.com/kosh04/.emacs.d Emacs 設定ファイルはこちら
 - https://wiki.debian.org/DotFilesList
