@@ -4,4 +4,4 @@ set -eu
 usage="usage: ${0##*/} hostname"
 hostname=${1?$usage}
 
-openssl s_client -connect $hostname:https -showcerts </dev/null 2>&1 | grep "[si]:"
+openssl s_client -connect "$hostname":https -showcerts </dev/null 2>&1 | grep "[si]:"
