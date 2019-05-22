@@ -1,0 +1,8 @@
+GOPATH01=$HOME/opt/go
+GOPATH02=$HOME/prog/go
+
+export GOPATH=$GOPATH01:$GOPATH02
+export PATH=$PATH:$GOPATH01/bin:$GOPATH02/bin
+
+# mkdir -p $GOPATH/bin
+# go get github.com/nsf/gocode

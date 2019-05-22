@@ -1,0 +1,15 @@
+#!/bin/bash
+#.bashrc_darwin18
+
+echo "call .bashrc_$OSTYPE" >&2
+
+alias updatedb=/usr/libexec/locate.updatedb
+alias clip=pbcopy
+alias ldd='otool -L'
+alias notepad='open -t'
+alias realpath=grealpath
+
+# JavaScript for Automation
+# NOTE: Safariの"開発>[Your macOS]>JSContextsのWebインスペクタを自動的に表示"を有効にしておくとデバッガが利用可能になる
+alias jxa='osascript -lJavaScript -i'
+alias jxa_debug='osascript -lJavaScript -e "debugger"'
