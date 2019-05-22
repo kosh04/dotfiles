@@ -1,0 +1,5 @@
+;; .guile   -*- mode: scheme -*-
+
+;; Readline
+(use-modules (ice-9 readline))
+(activate-readline)

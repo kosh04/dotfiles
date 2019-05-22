@@ -1,0 +1,4 @@
+char-encoding: raw
+doctype: "<!DOCTYPE html>"
+gnu-emacs: yes
+quiet: yes
