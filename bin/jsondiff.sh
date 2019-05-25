@@ -9,4 +9,4 @@ json_pretty='jq . --sort-keys'
 json_1=${1}
 json_2=${2}
 
-diff -u <($json_pretty $json_1) <($json_pretty $json_2)
+diff -u <($json_pretty "$json_1") <($json_pretty "$json_2")
