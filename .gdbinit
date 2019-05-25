@@ -30,5 +30,5 @@ end
 #add-auto-load-safe-path /path/to/.gdbinit
 set auto-load safe-path /
 
-# On 10.12 (Sierra) or later with SIP
+# On 10.12 (Sierra) or later with SIP (If install from HomeBrew)
 set startup-with-shell off

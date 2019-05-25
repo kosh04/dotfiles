@@ -2,7 +2,7 @@
 
 My dotfiles and scripts ☕
 
-## Install
+## Installation
 
 1. `$ git clone --bare https://github.com/kosh04/dotfiles.git ~/dotfiles.git`
 2. `$ alias dotfiles='git --git-dir=$HOME/dotfiles.git --work-tree=$HOME'` (or `~/bin/dotfiles`)
