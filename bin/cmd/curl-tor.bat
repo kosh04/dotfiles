@@ -1,0 +1,1 @@
+@curl --socks5 localhost:9150 %*
