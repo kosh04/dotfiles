@@ -1,6 +1,6 @@
 unset autoindent	# [-i, --autoindent]
 set casesensitive	# onsearch
-unset const		# [-c, --const] always show line/cursor position status line
+#unset const		# [-c, --const] always show line/cursor position status line
 set morespace		# [-O, --morespace] no top blank line
 set suspend		# [-z, --suspend] Enable suzpend (Ctrl-Z)
 unset noconvert		# [-N, --noconvert] dont't convert from DOS
