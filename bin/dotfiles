@@ -1,7 +1,7 @@
 #!/bin/sh
 set -eu
-export GIT_DIR=$HOME/dotfiles.git
-export GIT_WORK_TREE=$HOME
-git "$@"
+export GIT_DIR="$HOME/.dotfiles.git"
+export GIT_WORK_TREE="$HOME"
+git ${1+"$@"}
 
-# git --git-dir="$GIT_DIR" --work-tree="$GIT_WORK_TREE" "$@"
+# git --git-dir="$GIT_DIR" --work-tree="$GIT_WORK_TREE" ${1+"$@"}

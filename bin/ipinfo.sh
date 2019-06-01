@@ -16,6 +16,8 @@ cmds=(
     "curl ifconfig.co"                 # (IPv4/6)
     "curl wtfismyip.com/text"          # (IPv4/6)
     "curl eth0.me"                     # (IPv4 only)
+    "curl ifconfig.pro"                # (IPv4/6)
+    "curl ident.me"                    # (IPv4/6)
 )
 
 eval "${cmds[$RANDOM % ${#cmds[@]}]}"

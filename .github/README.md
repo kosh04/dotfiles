@@ -1,11 +1,11 @@
 # dotfiles [![Build Status](https://travis-ci.com/kosh04/dotfiles.svg?token=dfMzF3xay83G8zNxrhrj&branch=master)](https://travis-ci.com/kosh04/dotfiles)
 
-My dotfiles and scripts ☕
+My homedir dotfiles and scripts ☕
 
 ## Installation
 
-1. `$ git clone --bare https://github.com/kosh04/dotfiles.git ~/dotfiles.git`
-2. `$ alias dotfiles='git --git-dir=$HOME/dotfiles.git --work-tree=$HOME'` (or `~/bin/dotfiles`)
+1. `$ git clone --bare https://github.com/kosh04/dotfiles.git ~/.dotfiles.git`
+2. `$ alias dotfiles='git --git-dir=$HOME/.dotfiles.git --work-tree=$HOME'` (or use `~/bin/dotfiles`)
 3. `$ dotfiles config --local status.showUntrackedFiles no`
 4. `$ dotfiles checkout`
 
