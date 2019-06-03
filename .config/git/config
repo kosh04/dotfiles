@@ -14,3 +14,5 @@
         st = status -sb
         pushf = push --force-with-lease
 	gr = log --graph --date=short --decorate=short --pretty=format:'%Cgreen%h %Creset%cd %Cblue%cn %Cred%d %Creset%s'
+[color]
+	ui = auto

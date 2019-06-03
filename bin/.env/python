@@ -1,0 +1,2 @@
+export PYTHONUSERBASE=$HOME/.local/python
+export PATH=$PYTHONUSERBASE/bin:$PATH

@@ -1,0 +1,51 @@
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/core"
+# Spell checker with better logic than ispell
+brew "aspell"
+# Cross-platform make
+brew "cmake"
+# Migemo is a tool that supports Japanese incremental search with Romaji
+brew "cmigemo"
+# GNU File, Shell, and Text utilities
+brew "coreutils"
+# GNU Transport Layer Security (TLS) Library
+brew "gnutls"
+# Image manipulation library
+brew "jpeg"
+# Play, record, convert, and stream audio and video
+brew "ffmpeg"
+# GNU debugger
+brew "gdb"
+# GNU Pretty Good Privacy (PGP) package
+brew "gnupg", link: false
+# Improved top (interactive process viewer)
+brew "htop"
+# Configurable static site generator
+brew "hugo"
+# Lightweight and flexible command-line JSON processor
+brew "jq"
+# Library to render SVG files using Cairo
+brew "librsvg"
+# Next-gen compiler infrastructure
+brew "llvm"
+# Powerful multi-lingual file viewer/grep
+brew "lv"
+# Yet another part-of-speech and morphological analyzer
+brew "mecab"
+# IPA dictionary compiled for MeCab
+brew "mecab-ipadic"
+# Port scanning utility for large networks
+brew "nmap"
+# Monitor data's progress through a pipe
+brew "pv"
+# Static analysis and lint tool, for (ba)sh scripts
+brew "shellcheck"
+# User interface to the TELNET protocol (built from macOS Sierra sources)
+brew "telnet"
+# Internet file retriever
+brew "wget"
+# Run Windows applications without a copy of Microsoft Windows
+brew "wine"
+cask "launchcontrol"
+cask "xquartz"
