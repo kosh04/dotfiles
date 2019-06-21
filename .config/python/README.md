@@ -3,7 +3,7 @@
 ## NOTE:pip
 
 ```
-pip freeze > requirements.txt
+pip freeze --user > requirements.txt
 pip install -r requirements.txt
 ```
 
