@@ -1,4 +1,5 @@
 #!/bin/sh
+# Usage: dotfiles [GIT_OPTIONS] GIT_COMMAND [ARGS]
 set -eu
 export GIT_DIR="$HOME/.dotfiles.git"
 export GIT_WORK_TREE="$HOME"

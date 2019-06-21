@@ -4,19 +4,33 @@ My homedir dotfiles and scripts ☕
 
 ## Installation
 
-1. `$ git clone --bare https://github.com/kosh04/dotfiles.git ~/.dotfiles.git`
-2. `$ alias dotfiles='git --git-dir=$HOME/.dotfiles.git --work-tree=$HOME'` (or use `~/bin/dotfiles`)
-3. `$ dotfiles config --local status.showUntrackedFiles no`
-4. `$ dotfiles checkout`
+```sh
+git clone --bare git@github.com:kosh04/dotfiles.git ~/.dotfiles.git
+alias dotfiles='git --git-dir=$HOME/.dotfiles.git --work-tree=$HOME' # or using bin/dotfiles
+alias dotfiles >> ~/.bashrc
+dotfiles config --local status.showUntrackedFiles no
+dotfiles checkout
+```
 
-## Note
+## Tips
+
+### Using Tig (text-mode interface for Git)
+
+```sh
+dotfiles config --local alias.tig '!tig'
+dotfiles tig
+```
+
+### exclude files
+
+Edit `~/.dotfiles.git/info/exclude`
 
 ### XDG Base Directory Specificatio
 
 - https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html
-- https://wiki.archlinux.jp/index.php/XDG_Base_Directory_%E3%82%B5%E3%83%9D%E3%83%BC%E3%83%88
+- [https://wiki.archlinux.jp/index.php/XDG Base Directory サポート](https://wiki.archlinux.jp/index.php/XDG_Base_Directory_%E3%82%B5%E3%83%9D%E3%83%BC%E3%83%88)
 
-```
+```sh
 XDG_CONFIG_HOME=$HOME/.config
 XDG_CACHE_HOME =$HOME/.cache
 XDG_DATA_HOME  =$HOME/.local/share
