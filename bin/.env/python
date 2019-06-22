@@ -1,2 +1,4 @@
+# https://docs.python.org/ja/3/using/cmdline.html#environment-variables
 export PYTHONUSERBASE=$HOME/.local/python
 export PATH=$PYTHONUSERBASE/bin:$PATH
+#export PYTHONSTARTUP=$HOME/.config/python/pythonstartup.py

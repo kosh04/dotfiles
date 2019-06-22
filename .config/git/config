@@ -15,5 +15,11 @@
         st = status -sb
         pushf = push --force-with-lease
 	diff-cached = diff --cached
+	unstage = reset HEAD --
+	last = log -1 HEAD
+	env = !env | grep ^GIT
+
+	# https://stackoverflow.com/q/3065650/4499880
+	conflicts = diff --name-only --diff-filter=U #--cached
 [color]
 	ui = auto

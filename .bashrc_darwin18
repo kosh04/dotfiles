@@ -3,11 +3,12 @@
 
 echo 1>&2 "call .bashrc_$OSTYPE"
 
-alias updatedb=/usr/libexec/locate.updatedb
+alias updatedb='sudo /usr/libexec/locate.updatedb'
 alias clip=pbcopy
 alias ldd='otool -L'
 alias notepad='open -t'
 alias realpath=grealpath
+alias getifaddr='ipconfig getifaddr en0'
 
 # JavaScript for Automation
 # NOTE: Safariの"開発>[Your macOS]>JSContextsのWebインスペクタを自動的に表示"を有効にしておくとデバッガが利用可能になる

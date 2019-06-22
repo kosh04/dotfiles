@@ -21,9 +21,11 @@ dotfiles config --local alias.tig '!tig'
 dotfiles tig
 ```
 
-### exclude files
+### Exclude files
 
-Edit `~/.dotfiles.git/info/exclude`
+```sh
+$ edit ~/.dotfiles.git/info/exclude
+```
 
 ### XDG Base Directory Specificatio
 

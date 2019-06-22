@@ -21,3 +21,7 @@ cmds=(
 )
 
 eval "${cmds[$RANDOM % ${#cmds[@]}]}"
+
+# macos
+# $ ipconfig getifaddr <interface-name>
+# $ ipconfig getifaddr en0
