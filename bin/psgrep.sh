@@ -1,4 +1,11 @@
-#!/bin/sh
-set -eu
+#!/bin/bash
+set -eu -o pipefail
+
 pattern=${1?"Usage: $0 PATTERN"}
-pgrep -d, -x "$pattern" | xargs ps -fp 
+xargsopt=
+
+case "$OSTYPE" in
+    linux-gnu) xargsopt=--no-run-if-empty ;; # or "-r"
+esac
+
+pgrep -d, -x "$pattern" | xargs $xargsopt ps -fp
