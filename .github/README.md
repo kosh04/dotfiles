@@ -44,6 +44,6 @@ XDG_CONFIG_DIRS=/etc/xdg
 ## Other Links
 
 - [dotfiles.github.io](https://dotfiles.github.io/)
-- [The best way to store your dotfiles: A bare Git repository](https://ja.atlassian.com/git/tutorials/dotfiles)
+- [The best way to store your dotfiles: A bare Git repository](https://www.atlassian.com/git/tutorials/dotfiles)
 - https://github.com/kosh04/.emacs.d Emacs 設定ファイルはこちら
 - https://wiki.debian.org/DotFilesList
