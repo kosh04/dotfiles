@@ -17,9 +17,23 @@
 	diff-cached = diff --cached
 	unstage = reset HEAD --
 	last = log -1 HEAD
+	root = rev-parse --show-toplevel
 	env = !env | grep ^GIT
+	# git -C /path/to/gitrepo tig args...
+	tig = !tig
 
 	# https://stackoverflow.com/q/3065650/4499880
 	conflicts = diff --name-only --diff-filter=U #--cached
 [color]
 	ui = auto
+[tig]
+#	mouse = true
+	wrap-lines = true
+#	line-graphics = utf-8
+#	truncation-delimiter = utf-8
+	main-view = id date author commit-title:graph=yes,refs=yes
+#	main-view = id date:default author:full commit-title:yes,graph,refs,overflow=no
+[tig "bind"]
+	generic = * :source ~/.config/git/config
+	generic = ~ :toggle wrap-lines
+	generic = <Backspace> move-page-up
