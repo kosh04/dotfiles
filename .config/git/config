@@ -19,13 +19,19 @@
 	last = log -1 HEAD
 	root = rev-parse --show-toplevel
 	env = !env | grep ^GIT
-	# git -C /path/to/gitrepo tig args...
+	# git -C /path/to/gitrepo tig ARGS...
 	tig = !tig
-
-	# https://stackoverflow.com/q/3065650/4499880
+	# List all conflicted files. https://stackoverflow.com/q/3065650/4499880
 	conflicts = diff --name-only --diff-filter=U #--cached
+	# Sync with remote, overwrite local changes
+	fetch-clean = !git fetch origin && git reset --hard origin/master && git clean -f -d
+	tig = !tig
+	guides = help -g
 [color]
 	ui = auto
+#[help]
+#	# コマンドの推測＋自動実行 (誤爆する可能性がありそう..)
+#	autocorrect = 1
 [tig]
 #	mouse = true
 	wrap-lines = true

@@ -8,7 +8,7 @@ My homedir dotfiles and scripts ☕
 $ git clone --bare git@github.com:kosh04/dotfiles.git ~/.dotfiles.git
 $ alias dotfiles='git --git-dir=$HOME/.dotfiles.git --work-tree=$HOME' # or using bin/dotfiles
 $ alias dotfiles >> ~/.bashrc
-$ dotfiles config --local status.showUntrackedFiles no
+$ dotfiles config status.showUntrackedFiles no
 $ dotfiles checkout
 ```
 
@@ -17,7 +17,7 @@ $ dotfiles checkout
 ### Using Tig (text-mode interface for Git)
 
 ```sh
-$ dotfiles config --local alias.tig '!tig'
+$ dotfiles config alias.tig '!tig'
 $ dotfiles tig
 ```
 

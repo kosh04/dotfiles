@@ -4,9 +4,14 @@ set -eux
 export GIT_DIR=$HOME/.dotfiles.git
 export GIT_WORK_TREE=$HOME
 
-mkdir ${BACKUP_DIR=$HOME/.dotfiles.bak}
+backup_archive=~/.dotfiles.bakup.tar
 
 # git checkout がエラー終了した場合に実行する
-# 上書きされる可能性のあるファイル一覧を ${BACKUP_DIR}/ 以下に退避させる
-git diff --cached --name-only --diff-filter=D |\
-	xargs -I '{}' bash -c "install -vD {} ${BACKUP_DIR}/{} && rm {}"
+# 上書きされる可能性のあるファイル一覧をアーカイブしてバックアップ
+git diff --cached --name-only --diff-filter=D | \
+    tar cvf ${backup_archive} --files-from -
+
+# バックアップの解凍
+# tar xf ${backup_archive} -C /path/to/dest_dir
+
+git checkout --force

@@ -1,0 +1,2 @@
+settings set target.load-cwd-lldbinit true
+#settings set auto-confirm 1
