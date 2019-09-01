@@ -8,4 +8,4 @@ case "$OSTYPE" in
     linux-gnu) xargsopt=--no-run-if-empty ;; # or "-r"
 esac
 
-pgrep -d, -x "$pattern" | xargs $xargsopt ps -fp
+pgrep -d, -ix "$pattern" | xargs $xargsopt ps -fp

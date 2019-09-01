@@ -3,8 +3,8 @@
 
 各種パッケージマネージャでインストールしたプラグイン一覧のバックアップ
 
-- [*] chocolatey `~/.config/chocolatey/`
-- [*] pip `~/.config/python/requirements.txt`
+- [x] chocolatey `~/.config/chocolatey/`
+- [x] pip `~/.config/python/requirements.txt`
 - [ ] npm `npm ls -g --depth=0`
 - [ ] gem
 - [ ] vscode `code --list-extensions | xargs -L1 echo "code --install-extension"`

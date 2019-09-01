@@ -3,7 +3,7 @@
 #   - http://git-scm.com/docs/git-config#_includes
 
 [include]
-	path = config_local
+	path = ./config_local
 [user]
 	name = kosh04
 	email = shigeru.kb@gmail.com
@@ -19,6 +19,8 @@
 	last = log -1 HEAD
 	root = rev-parse --show-toplevel
 	env = !env | grep ^GIT
+	##### branch (branch-current)
+	bc = rev-parse --abbrev-ref HEAD
 	# git -C /path/to/gitrepo tig ARGS...
 	tig = !tig
 	# List all conflicted files. https://stackoverflow.com/q/3065650/4499880
