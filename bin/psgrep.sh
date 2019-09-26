@@ -3,14 +3,14 @@ set -eu -o pipefail
 
 usage="Usage: $0 [options] PATTERN"
 
-pgrepopt=
+pgrepopt=()
 xargsopt=
 
 while getopts ix OPT
 do
     case $OPT in
-        i) pgrepopt+="-i " ;;
-        x) pgrepopt+="-x " ;;
+        i) pgrepopt+=("-i") ;;
+        x) pgrepopt+=("-x") ;;
         *) ;;
     esac
 done
@@ -22,4 +22,4 @@ esac
 
 pattern=${1?"$usage"}
 
-pgrep -d, $pgrepopt "$pattern" | xargs $xargsopt ps -fp
+pgrep -d, "${pgrepopt[@]}" "$pattern" | xargs $xargsopt ps -fp
