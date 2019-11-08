@@ -1,8 +1,11 @@
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/core"
+tap "homebrew/services"
 # Spell checker with better logic than ispell
 brew "aspell"
+# Bourne-Again SHell, a UNIX command interpreter
+brew "bash"
 # Cross-platform make
 brew "cmake"
 # Migemo is a tool that supports Japanese incremental search with Romaji
@@ -17,12 +20,18 @@ brew "jpeg"
 brew "ffmpeg"
 # GNU debugger
 brew "gdb"
+# Distributed revision control system
+brew "git", link: false
 # GNU Pretty Good Privacy (PGP) package
 brew "gnupg", link: false
+# Colorize logfiles and command output
+brew "grc"
 # Improved top (interactive process viewer)
 brew "htop"
 # Configurable static site generator
 brew "hugo"
+# JSON output from a shell
+brew "jo"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
 # Library to render SVG files using Cairo
@@ -41,8 +50,18 @@ brew "nmap"
 brew "pv"
 # Static analysis and lint tool, for (ba)sh scripts
 brew "shellcheck"
+# Organize software neatly under a single directory tree (e.g. /usr/local)
+brew "stow"
 # User interface to the TELNET protocol (built from macOS Sierra sources)
 brew "telnet"
+# Code-search similar to ack
+brew "the_silver_searcher"
+# Text interface for Git repositories
+brew "tig"
+# Extract, view, and test RAR archives
+brew "unrar"
+# Sends magic packets to wake up network-devices
+brew "wakeonlan"
 # Internet file retriever
 brew "wget"
 # Run Windows applications without a copy of Microsoft Windows

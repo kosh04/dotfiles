@@ -1,5 +1,5 @@
 #!/bin/sh
-set -eu
+set -eux
 
 : "${BREWFILE:=$HOME/.config/homebrew/Brewfile}"
 
@@ -10,7 +10,7 @@ case $command in
     install)
         brew bundle install --verbose --file="$BREWFILE" ;;
     dump)
-        brew bundle dump --describe --file="$BREWFILE" ;;
+        brew bundle dump --describe --force --file="$BREWFILE" ;;
     help|*)
         echo 1>&2 "$usage" ;;  
 esac
