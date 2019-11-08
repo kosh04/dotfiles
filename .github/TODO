@@ -1,6 +1,12 @@
 <!-- -*- markdown -*- -->
 # TODO
 
+## Dotfiles
+
+- [ ] .torrc (`--list-torrc-options`)
+
+## Package Managers
+
 各種パッケージマネージャでインストールしたプラグイン一覧のバックアップ
 
 - [x] chocolatey `~/.config/chocolatey/`
@@ -11,3 +17,17 @@
 - [ ] go
 - [ ] pacman (msys2)
 - [ ] cygwin (いる？)
+
+## Signing commits with GPG
+
+https://help.github.com/en/github/authenticating-to-github/signing-commits
+
+```shell
+git config commit.gpgsign true
+```
+
+## Links
+
+参考になりそうな設定ファイルのリンク集
+
+- https://github.com/mathiasbynens/dotfiles

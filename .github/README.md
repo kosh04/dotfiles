@@ -30,6 +30,7 @@ $ edit ~/.dotfiles.git/info/exclude
 ### XDG Base Directory Specificatio
 
 - https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html
+- https://wiki.archlinux.org/index.php/XDG_Base_Directory
 - [https://wiki.archlinux.jp/index.php/XDG Base Directory サポート](https://wiki.archlinux.jp/index.php/XDG_Base_Directory_%E3%82%B5%E3%83%9D%E3%83%BC%E3%83%88)
 
 ```sh
