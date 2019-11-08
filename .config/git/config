@@ -1,17 +1,20 @@
 # Manual:
 #   - man git-config
-#   - http://git-scm.com/docs/git-config#_includes
+#   - https://git-scm.com/docs/git-config
 
 [include]
 	path = ./config_local
 [user]
 	name = kosh04
 	email = shigeru.kb@gmail.com
+[color]
+	ui = auto
 [alias]
         alias = config --get-regexp '^alias\\.'
 	graph = log --graph --oneline --decorate=full
 	gr = log --graph --date=short --decorate=short --pretty=format:'%Cgreen%h %Creset%cd %Cblue%cn %Cred%d %Creset%s'
-        rename = mv
+	rename = mv
+	remove = rm
         st = status -sb
         pushf = push --force-with-lease
 	diff-cached = diff --cached
@@ -19,18 +22,22 @@
 	last = log -1 HEAD
 	root = rev-parse --show-toplevel
 	env = !env | grep ^GIT
+	##### comit (or -C HEAD, --reuse-message=@)
+	amend = commit --amend --no-edit
 	##### branch (branch-current)
 	bc = rev-parse --abbrev-ref HEAD
-	# git -C /path/to/gitrepo tig ARGS...
+	## git -C /path/to/gitrepo tig ARGS...
 	tig = !tig
-	# List all conflicted files. https://stackoverflow.com/q/3065650/4499880
+	## List all conflicted files. https://stackoverflow.com/q/3065650/4499880
 	conflicts = diff --name-only --diff-filter=U #--cached
-	# Sync with remote, overwrite local changes
+	## Sync with remote, overwrite local changes
 	fetch-clean = !git fetch origin && git reset --hard origin/master && git clean -f -d
 	tig = !tig
 	guides = help -g
-[color]
-	ui = auto
+	## Listing
+	tags = tag -l
+	branches = branch -a
+	remotes = remote -v
 #[help]
 #	# コマンドの推測＋自動実行 (誤爆する可能性がありそう..)
 #	autocorrect = 1
