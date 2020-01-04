@@ -1,6 +1,7 @@
 #!/bin/bash
 set -eu -o pipefail
 
+## `pgrep -a PATTERN` でも十分な気がしてきた...
 usage="Usage: $0 [options] PATTERN"
 
 pgrepopt=()
@@ -21,5 +22,10 @@ case "$OSTYPE" in
 esac
 
 pattern=${1?"$usage"}
+
+# using pidof
+psgrep() {
+    pidof "$pattern" | xargs $xargsopt ps -ep
+}
 
 pgrep -d, "${pgrepopt[@]}" "$pattern" | xargs $xargsopt ps -fp
