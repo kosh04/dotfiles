@@ -1,5 +1,5 @@
 #!/bin/bash
-set -eu -o pipefail
+set -e -o pipefail
 
 usage="Usage: $0 [options] PATTERN"
 
