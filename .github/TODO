@@ -4,6 +4,7 @@
 ## Dotfiles
 
 - [ ] .torrc (`--list-torrc-options`)
+- [ ] .gnupg/gpg.conf
 
 ## Package Managers
 
@@ -14,7 +15,7 @@
 - [ ] npm `npm ls -g --depth=0`
 - [ ] gem
 - [ ] vscode `code --list-extensions | xargs -L1 echo "code --install-extension"`
-- [ ] go
+- [ ] go (golang.org/x/tools/cmd/*)
 - [ ] pacman (msys2)
 - [ ] cygwin (いる？)
 

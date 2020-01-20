@@ -2,6 +2,12 @@
 
 My homedir dotfiles and scripts ☕
 
+## Features
+
+- macOS, Linux compatible
+- Simple installation (no symlink required)
+- Support [XDG Base Directory Specification] to keep `$HOME` clean
+
 ## Installation
 
 ```sh
@@ -27,7 +33,7 @@ $ dotfiles tig
 $ edit ~/.dotfiles.git/info/exclude
 ```
 
-### XDG Base Directory Specificatio
+### XDG Base Directory Specification
 
 - https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html
 - https://wiki.archlinux.org/index.php/XDG_Base_Directory
@@ -44,7 +50,10 @@ XDG_CONFIG_DIRS=/etc/xdg
 
 ## Other Links
 
-- [dotfiles.github.io](https://dotfiles.github.io/)
+- [dotfiles.github.io]
 - [The best way to store your dotfiles: A bare Git repository](https://www.atlassian.com/git/tutorials/dotfiles)
 - https://github.com/kosh04/.emacs.d Emacs 設定ファイルはこちら
 - https://wiki.debian.org/DotFilesList
+
+[dotfiles.github.io]:https://dotfiles.github.io/
+[XDG Base Directory Specification]:https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html
