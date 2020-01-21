@@ -1,3 +1,6 @@
+# profile.ps1 ($PROFILE.CurrentUserAllHosts)
+
+# (Get-Command prompt).ScriptBlock
 function prompt() {
     if ($?) {
         write-host "(*'-')" -NoNewLine -ForegroundColor "Green"
