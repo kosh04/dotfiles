@@ -27,6 +27,10 @@ document typeof
 Print data type of expression EXP (alias to `whatis').
 end
 
+define print_argv
+  p *argv@argc
+end
+
 #add-auto-load-safe-path /path/to/.gdbinit
 set auto-load safe-path /
 
