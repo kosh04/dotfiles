@@ -6,3 +6,6 @@
 #echo -en "\x1B[2J\x1B\x63"
 echo -n $'\x1B[2J\x1B\x63'
 #printf "\x1B[2J\x1B\x63"
+
+#reset
+#stty sane
