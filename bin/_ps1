@@ -1,17 +1,30 @@
 #!/bin/bash
-# Usage: PS1=$(source ~/path/to/_ps1)
+# Usage: source ~/path/to/_ps1
 
-_ps1() {
-	local bold="\[$(tput bold)\]"
-	local red="\[$(tput setaf 1)\]"
-	local green="\[$(tput setaf 2)\]"
-	local blue="\[$(tput setaf 4)\]"
-	local normal="\[$(tput sgr0)\]"
+_ps1()
+{
+local bold="\[\e[1m\]"          # $(tput bold)
+local red="\[\e[31m\]"          # $(tput setaf 1)
+local green="\[\e[32m\]"        # $(tput setaf 2)
+local blue="\[\e[34m\]"         # $(tput setaf 4)
+local reset="\[\e[0m\]"         # $(tput sgr0)
 
-	if command -v __git_ps1 >/dev/null; then
-		echo "\t [${bold}${red}\u${green}@${blue}\h${normal}:\W]\$(__git_ps1)\$ "
-	else
-		echo "\t [${bold}${red}\u${green}@${blue}\h${normal}:\W]\$ "
-	fi
+if command -v __git_ps1 >/dev/null; then
+echo "\$(_ps1_status)[${bold}${red}\u${green}@${blue}\h${reset} \W]\$(__git_ps1)\\$ "
+else
+echo "\$(_ps1_status)[${bold}${red}\u${green}@${blue}\h${reset} \W]\\$ "
+fi
 }
-_ps1
+
+_ps1_status()
+{
+    local status=$?
+    [ "${PS1_STATUS}" != "yes" ] && return
+    if [ "${status}" -eq 0 ]; then
+        printf "\e[32m%s\e[0m" "(*'-')"
+    else
+        printf "\e[31m%s#%d\e[0m" "(*;-;)" "${status}"
+    fi
+}
+
+PS1=$(_ps1)
