@@ -1,0 +1,42 @@
+#!/bin/bash
+# Usage: source ~/path/to/_ps1
+
+_ps1()
+{
+local bold="\[\e[1m\]"          # $(tput bold)
+local red="\[\e[31m\]"          # $(tput setaf 1)
+local green="\[\e[32m\]"        # $(tput setaf 2)
+local blue="\[\e[34m\]"         # $(tput setaf 4)
+local reset="\[\e[0m\]"         # $(tput sgr0)
+
+if command -v __git_ps1 >/dev/null; then
+echo "[${bold}${red}\u${green}@${blue}\h${reset} \W]\$(__git_ps1)\\$ "
+else
+echo "[${bold}${red}\u${green}@${blue}\h${reset} \W]\\$ "
+fi
+}
+
+PS1=$(_ps1)
+
+# ターミナルのタイトルの動的変更
+# See also: /etc/bash.bashrc
+case "$TERM" in
+xterm*|rxvt*)
+    PROMPT_COMMAND='echo -ne "\e]1;${USER}@${HOSTNAME}: ${PWD}\a"'
+    ;;
+esac
+
+# エラーコードの表示 (optional)
+_exit_status() {
+    local status=$?
+    local red="\e[31m"
+    local green="\e[32m"
+    local reset="\e[0m"
+
+    if [[ $status == 0 ]]; then
+        echo -e "${green}(*'-')${reset}"
+    else
+        echo -e "${red}(*;-;) #${status} at $(date '+%FT%T'%z)${reset}"
+    fi
+}
+trap _exit_status ERR
