@@ -13,3 +13,7 @@ function prompt() {
     $p = "> "
     return "[${u}@${h}] ${l}${p}"
 }
+
+if ($IsWindows) {
+    . "${PSScriptRoot}/profile_windows.ps1"
+}
