@@ -15,6 +15,7 @@ $ git clone --bare git@github.com:kosh04/dotfiles.git ~/.dotfiles.git
 $ alias dotfiles='git --git-dir=$HOME/.dotfiles.git --work-tree=$HOME' # or using bin/dotfiles
 $ alias dotfiles >> ~/.bashrc
 $ dotfiles config status.showUntrackedFiles no
+$ echo "*" >> ~/.dotfiles.git/info/exclude
 $ dotfiles checkout
 ```
 
@@ -25,12 +26,6 @@ $ dotfiles checkout
 ```sh
 $ dotfiles config alias.tig '!tig'
 $ dotfiles tig
-```
-
-### Exclude files
-
-```sh
-$ edit ~/.dotfiles.git/info/exclude
 ```
 
 ### XDG Base Directory Specification
