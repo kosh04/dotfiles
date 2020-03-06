@@ -1,7 +1,7 @@
 @echo off
 setlocal
-rem set TOR_ROOT=%USERPROFILE%\Programs\Tor Browser\Browser\TorBrowser
-set TOR_ROOT=%USERPROFILE%\Downloads\net-p2p\tor-win32-0.3.3.7
+
+set TOR_ROOT=%LOCALAPPDATA%\Programs\tor
 
 rem NOTE: option -f CONFIG_FILE (default %APPDATA%\tor\torrc)
 
