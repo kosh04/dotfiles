@@ -1,5 +1,5 @@
 #!/bin/bash
-# Usage: source ~/path/to/_ps1
+# Usage: source ~/path/to/_prompt
 
 _ps1()
 {
@@ -20,11 +20,31 @@ PS1=$(_ps1)
 
 # ターミナルのタイトルの動的変更
 # See also: /etc/bash.bashrc
+_set_terminal_title()
+{
+    local title="${1:-${USER}@${HOSTNAME}: ${PWD/#$HOME/'~'}}"
+    echo -ne "\e]0;${title}\a"
+}
+
 case "$TERM" in
 xterm*|rxvt*)
-    PROMPT_COMMAND='echo -ne "\e]1;${USER}@${HOSTNAME}: ${PWD}\a"'
+    PROMPT_COMMAND='_set_terminal_title'
     ;;
 esac
+
+# ホームディレクトリ限定で git コマンドを bin/dotfiles と同様に振る舞わせたい
+# __git_ps1 がある環境であればプロンプト PS1 からも利用可能になる
+_dotfiles_ready()
+{
+    if [[ "$PWD" == "$HOME" ]]; then
+        export GIT_DIR="$HOME/.dotfiles.git"
+        export GIT_WORK_TREE="$HOME"
+    else
+        unset GIT_DIR
+        unset GIT_WORK_TREE
+    fi    
+}
+PROMPT_COMMAND="_dotfiles_ready;${PROMPT_COMMAND}"
 
 # エラーコードの表示 (optional)
 _exit_status() {
