@@ -38,11 +38,14 @@
 	tags = tag -l
 	branches = branch -a
 	remotes = remote -v
+	## Submodule
+	submodule-update-latest = submodule update --remote --recursive # <path>
+	submodule-update-all = submodule foreach git pull # origin master
 #[help]
 #	# コマンドの推測＋自動実行 (誤爆する可能性がありそう..)
 #	autocorrect = 1
 [tig]
-#	mouse = true
+	mouse = true
 	wrap-lines = true
 #	line-graphics = utf-8
 #	truncation-delimiter = utf-8
