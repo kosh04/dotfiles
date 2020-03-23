@@ -2,6 +2,10 @@ tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/core"
 tap "homebrew/services"
+# Command-line interface for SQLite
+brew "sqlite"
+# Record and share terminal sessions
+brew "asciinema"
 # Spell checker with better logic than ispell
 brew "aspell"
 # Bourne-Again SHell, a UNIX command interpreter
@@ -12,6 +16,8 @@ brew "cmake"
 brew "cmigemo"
 # GNU File, Shell, and Text utilities
 brew "coreutils"
+# File comparison utilities
+brew "diffutils"
 # GNU Transport Layer Security (TLS) Library
 brew "gnutls"
 # Image manipulation library
@@ -30,10 +36,14 @@ brew "grc"
 brew "htop"
 # Configurable static site generator
 brew "hugo"
+# Tools and libraries to manipulate images in many formats
+brew "imagemagick"
 # JSON output from a shell
 brew "jo"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
+# Simple terminal UI for git commands
+brew "lazygit"
 # Library to render SVG files using Cairo
 brew "librsvg"
 # Next-gen compiler infrastructure
@@ -44,6 +54,8 @@ brew "lv"
 brew "mecab"
 # IPA dictionary compiled for MeCab
 brew "mecab-ipadic"
+# Network Kanji code conversion Filter (NKF)
+brew "nkf"
 # Port scanning utility for large networks
 brew "nmap"
 # Monitor data's progress through a pipe
@@ -52,7 +64,9 @@ brew "pv"
 brew "shellcheck"
 # Organize software neatly under a single directory tree (e.g. /usr/local)
 brew "stow"
-# User interface to the TELNET protocol (built from macOS Sierra sources)
+# CLI for extracting streams from various websites to a video player
+brew "streamlink"
+# User interface to the TELNET protocol
 brew "telnet"
 # Code-search similar to ack
 brew "the_silver_searcher"
@@ -66,5 +80,8 @@ brew "wakeonlan"
 brew "wget"
 # Run Windows applications without a copy of Microsoft Windows
 brew "wine"
+# Download YouTube videos from the command-line
+brew "youtube-dl"
 cask "launchcontrol"
+cask "powershell"
 cask "xquartz"
