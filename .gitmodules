@@ -1,3 +1,7 @@
 [submodule ".local/share/gitignore"]
 	path = .local/share/gitignore
 	url = https://github.com/github/gitignore.git
+
+[submodule ".local/share/bash-git-prompt"]
+	path = .local/share/bash-git-prompt
+	url = https://github.com/magicmonty/bash-git-prompt.git
