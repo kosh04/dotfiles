@@ -1,5 +1,6 @@
 # File: .gdbinit
 # Usage: source ~/.gdbinit
+# or $ gdb -nh -x "$XDG_CONFIG_HOME"/gdb/init
 
 set history save on
 set history size 10000

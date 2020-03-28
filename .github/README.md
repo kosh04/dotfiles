@@ -4,7 +4,7 @@ My homedir dotfiles and scripts ☕
 
 ## Features
 
-- macOS, Linux compatible
+- Linux, Darwin (macOS) compatible
 - Simple installation (no symlink required)
 - Support [XDG Base Directory Specification] to keep `$HOME` clean
 

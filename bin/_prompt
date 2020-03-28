@@ -34,6 +34,7 @@ esac
 
 # ホームディレクトリ限定で git コマンドを bin/dotfiles と同様に振る舞わせたい
 # __git_ps1 がある環境であればプロンプト PS1 からも利用可能になる
+# WARNING: 内部で git を呼び出すコマンドに影響を及ぼす可能性あり (`go get` など)
 _dotfiles_ready()
 {
     if [[ "$PWD" == "$HOME" ]]; then
@@ -42,7 +43,7 @@ _dotfiles_ready()
     else
         unset GIT_DIR
         unset GIT_WORK_TREE
-    fi    
+    fi
 }
 PROMPT_COMMAND="_dotfiles_ready;${PROMPT_COMMAND}"
 
