@@ -1,4 +1,4 @@
-# .convig/pip
+# .config/pip
 
 https://pip.pypa.io/en/stable/
 
