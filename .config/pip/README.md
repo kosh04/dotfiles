@@ -24,7 +24,7 @@ wget https://bootstrap.pypa.io/get-pip.py && python get-pip.py
 freeze and install
 
 ```shell
-pip freeze --user > requirements.txt
+pip freeze --user | tee requirements.txt
 pip install --user -r requirements.txt
 ```
 
