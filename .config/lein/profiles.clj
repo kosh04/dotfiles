@@ -1,7 +1,10 @@
 ;;; .lein/profiles.clj
 
-;; link:
+;; bash: export LEIN_HOME="$HOME/.config/lein"
+
+;; see also
 ;; - https://github.com/technomancy/leiningen/blob/master/doc/PROFILES.md
+;; - https://github.com/technomancy/leiningen/blob/master/sample.project.clj
 ;; - https://github.com/clojure-emacs/cider#setting-up-ciders-nrepl-middleware
 
 {:repl
