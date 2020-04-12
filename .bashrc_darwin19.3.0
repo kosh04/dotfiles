@@ -1,5 +1,4 @@
 #!/bin/bash
-#.bashrc_darwin18
 
 echo 1>&2 "call .bashrc_$OSTYPE"
 
