@@ -10,12 +10,16 @@ brew "asciinema"
 brew "aspell"
 # Bourne-Again SHell, a UNIX command interpreter
 brew "bash"
+# GNU File, Shell, and Text utilities
+brew "coreutils"
+# Text-based window manager and terminal multiplexer
+brew "byobu"
+# Core application library for C
+brew "glib"
 # Cross-platform make
 brew "cmake"
 # Migemo is a tool that supports Japanese incremental search with Romaji
 brew "cmigemo"
-# GNU File, Shell, and Text utilities
-brew "coreutils"
 # File comparison utilities
 brew "diffutils"
 # GNU Transport Layer Security (TLS) Library
@@ -26,16 +30,14 @@ brew "jpeg"
 brew "ffmpeg"
 # GNU debugger
 brew "gdb"
-# Distributed revision control system
-brew "git", link: false
-# GNU Pretty Good Privacy (PGP) package
-brew "gnupg", link: false
 # Colorize logfiles and command output
 brew "grc"
 # Improved top (interactive process viewer)
 brew "htop"
 # Configurable static site generator
 brew "hugo"
+# Spell checker and morphological analyzer
+brew "hunspell"
 # Tools and libraries to manipulate images in many formats
 brew "imagemagick"
 # JSON output from a shell
@@ -58,8 +60,12 @@ brew "mecab-ipadic"
 brew "nkf"
 # Port scanning utility for large networks
 brew "nmap"
+# Manage compile and link flags for libraries
+brew "pkg-config"
 # Monitor data's progress through a pipe
 brew "pv"
+# Readline wrapper: adds readline support to tools that lack it
+brew "rlwrap"
 # Static analysis and lint tool, for (ba)sh scripts
 brew "shellcheck"
 # Organize software neatly under a single directory tree (e.g. /usr/local)
@@ -82,6 +88,7 @@ brew "wget"
 brew "wine"
 # Download YouTube videos from the command-line
 brew "youtube-dl"
+cask "keepassxc"
 cask "launchcontrol"
 cask "powershell"
 cask "xquartz"
