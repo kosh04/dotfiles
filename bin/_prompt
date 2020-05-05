@@ -27,7 +27,7 @@ _set_terminal_title()
 }
 
 case "$TERM" in
-xterm*|rxvt*)
+xterm*|rxvt*|screen*)
     PROMPT_COMMAND='_set_terminal_title'
     ;;
 esac
