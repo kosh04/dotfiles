@@ -47,12 +47,12 @@
 	    //"colorScheme": "Solarized Dark",
 	    //"colorScheme": "One Half Dark",
             "colorScheme": "Dracula",
-	    "fontFace" : "Cascadia Code PL",
-	    //"fontFace": "Sarasa Term J",
+	    //"fontFace" : "Cascadia Code PL",
+	    "fontFace": "Sarasa Term J",
 	    //"fontFace": "HackGen",
 	    "useAcrylic": true,
-	    "acrylicOpacity": 0.8,
-	    "padding" : "5,0",
+	    "acrylicOpacity": 0.7,
+	    "padding" : "3,0",
 	    "cursorShape": "filledBox"
         },
         {
