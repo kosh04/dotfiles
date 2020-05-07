@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* about:config?toolkit.legacyUserProfileCustomizations.stylesheets=true */
+/* user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true); */
 
 /* #tabContextMenu の一部を非表示にする */
 #context_closeOtherTabs /* 他のタブをすべて閉じる */
