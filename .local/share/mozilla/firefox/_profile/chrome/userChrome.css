@@ -1,0 +1,13 @@
+@charset "UTF-8";
+/* about:config?toolkit.legacyUserProfileCustomizations.stylesheets=true */
+
+/* #tabContextMenu の一部を非表示にする */
+#context_closeOtherTabs /* 他のタブをすべて閉じる */
+{
+    display: none !important;
+}
+
+/* 未ロードのタブを半透明にする */
+#TabsToolbar .tabbrowser-tab[pending] {
+    opacity: 0.6;
+}
