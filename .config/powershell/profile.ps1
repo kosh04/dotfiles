@@ -17,3 +17,7 @@ function prompt() {
 if ($IsWindows) {
     . "${PSScriptRoot}/profile_windows.ps1"
 }
+
+# PSReadLine
+# https://docs.microsoft.com/en-us/powershell/module/psreadline/?view=powershell-7
+Set-PSReadLineKeyHandler -Key Tab -Function MenuComplete
