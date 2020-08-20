@@ -16,6 +16,10 @@ brew "coreutils"
 brew "byobu"
 # Core application library for C
 brew "glib"
+# Next-gen compiler infrastructure
+brew "llvm"
+# C/C++/ObjC language server
+brew "ccls"
 # Cross-platform make
 brew "cmake"
 # Migemo is a tool that supports Japanese incremental search with Romaji
@@ -24,6 +28,8 @@ brew "cmigemo"
 brew "diffutils"
 # GNU Transport Layer Security (TLS) Library
 brew "gnutls"
+# Manage compile and link flags for libraries
+brew "pkg-config"
 # Image manipulation library
 brew "jpeg"
 # Play, record, convert, and stream audio and video
@@ -40,6 +46,8 @@ brew "hugo"
 brew "hunspell"
 # Tools and libraries to manipulate images in many formats
 brew "imagemagick"
+# C library for encoding, decoding, and manipulating JSON
+brew "jansson"
 # JSON output from a shell
 brew "jo"
 # Lightweight and flexible command-line JSON processor
@@ -48,8 +56,6 @@ brew "jq"
 brew "lazygit"
 # Library to render SVG files using Cairo
 brew "librsvg"
-# Next-gen compiler infrastructure
-brew "llvm"
 # Powerful multi-lingual file viewer/grep
 brew "lv"
 # Yet another part-of-speech and morphological analyzer
@@ -60,8 +66,6 @@ brew "mecab-ipadic"
 brew "nkf"
 # Port scanning utility for large networks
 brew "nmap"
-# Manage compile and link flags for libraries
-brew "pkg-config"
 # Monitor data's progress through a pipe
 brew "pv"
 # Readline wrapper: adds readline support to tools that lack it
