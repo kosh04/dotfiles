@@ -32,6 +32,8 @@ define print_argv
   p *argv@argc
 end
 
+set auto-load local-gdbinit
+
 #add-auto-load-safe-path /path/to/.gdbinit
 set auto-load safe-path /
 
