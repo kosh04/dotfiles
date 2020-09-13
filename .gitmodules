@@ -5,3 +5,6 @@
 [submodule ".local/share/bash-git-prompt"]
 	path = .local/share/bash-git-prompt
 	url = https://github.com/magicmonty/bash-git-prompt.git
+[submodule ".local/share/gdb-dashboard"]
+	path = .local/share/gdb-dashboard
+	url = https://github.com/cyrus-and/gdb-dashboard.git
