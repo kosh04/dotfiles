@@ -21,12 +21,14 @@ cmds=(
     "curl api.infoip.io"               # (4 only)
     "curl bot.whatismyipaddress.com"   # (4/6)
     "curl checkip.amazonaws.com"       # (4 only)
+    "curl https://domains.google.com/checkip" # (4/6)
     "curl curlmyip.net"                # (4/6)
     "curl diagnostic.opendns.com/myip" # (4/6)
     "curl eth0.me"                     # (4 only)
     "curl httpbin.org/ip"              # (4 only)
     "curl icanhazip.com"               # (4/6)
     "curl ident.me"                    # (4/6; v4.ident.me; v6.ident.me)
+    "curl ifconfig.io"                 # (4/6)
     "curl ifconfig.co"                 # (4/6)
     "curl ifconfig.me"                 # (4 only)
     "curl ifconfig.pro"                # (4/6)
@@ -46,6 +48,8 @@ cmds=(
     "curl ipv4.whatismyip.akamai.com"
     "curl ipv6.whatismyip.akamai.com"
     "curl wtfismyip.com/text"          # (4/6)
+    "curl ipaddr.ga"                   # (4/6)
+    "curl api.ipify.org"               # (4/6)
 )
 
 eval "${cmds[$RANDOM % ${#cmds[@]}]}"
