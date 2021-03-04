@@ -10,6 +10,7 @@ case $command in
     install)
         brew bundle install --verbose --file="$BREWFILE" ;;
     dump)
+        [ -f "$BREWFILE" ] && cp -v "$BREWFILE" "$BREWFILE.old"
         brew bundle dump --describe --force --file="$BREWFILE" ;;
     help|*)
         echo 1>&2 "$usage" ;;  

@@ -1,5 +1,6 @@
 tap "homebrew/bundle"
 tap "homebrew/cask"
+tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
 # Command-line interface for SQLite
@@ -10,12 +11,16 @@ brew "asciinema"
 brew "aspell"
 # Bourne-Again SHell, a UNIX command interpreter
 brew "bash"
+# Generate compilation database for clang tooling
+brew "bear"
 # GNU File, Shell, and Text utilities
 brew "coreutils"
 # Text-based window manager and terminal multiplexer
 brew "byobu"
 # Core application library for C
 brew "glib"
+# Manage compile and link flags for libraries
+brew "pkg-config"
 # Next-gen compiler infrastructure
 brew "llvm"
 # C/C++/ObjC language server
@@ -28,8 +33,6 @@ brew "cmigemo"
 brew "diffutils"
 # GNU Transport Layer Security (TLS) Library
 brew "gnutls"
-# Manage compile and link flags for libraries
-brew "pkg-config"
 # Image manipulation library
 brew "jpeg"
 # Play, record, convert, and stream audio and video
@@ -58,6 +61,8 @@ brew "lazygit"
 brew "librsvg"
 # Powerful multi-lingual file viewer/grep
 brew "lv"
+# Java-based project management
+brew "maven"
 # Yet another part-of-speech and morphological analyzer
 brew "mecab"
 # IPA dictionary compiled for MeCab
@@ -66,6 +71,8 @@ brew "mecab-ipadic"
 brew "nkf"
 # Port scanning utility for large networks
 brew "nmap"
+# Password manager
+brew "pass"
 # Monitor data's progress through a pipe
 brew "pv"
 # Readline wrapper: adds readline support to tools that lack it
@@ -92,7 +99,11 @@ brew "wget"
 brew "wine"
 # Download YouTube videos from the command-line
 brew "youtube-dl"
+# Password manager app
 cask "keepassxc"
+# Create, manage and debug system- and user services
 cask "launchcontrol"
+# Command-line shell and scripting language
 cask "powershell"
+# Open-source version of the X.Org X Window System
 cask "xquartz"
