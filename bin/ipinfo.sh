@@ -49,7 +49,7 @@ cmds=(
     "curl ipv6.whatismyip.akamai.com"
     "curl wtfismyip.com/text"          # (4/6)
     "curl ipaddr.ga"                   # (4/6)
-    "curl api.ipify.org"               # (4/6)
+    "curl api64.ipify.org"             # (4/6)
 )
 
 eval "${cmds[$RANDOM % ${#cmds[@]}]}"
