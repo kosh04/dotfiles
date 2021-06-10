@@ -1,5 +1,5 @@
 #!/bin/bash
-set -eux
+set -euo pipefail
 
 # NOTE: force IPv4 or IPv6 lookup?
 # Use command flags, e.g. "dig -[46]", "curl -[46]"
@@ -50,8 +50,10 @@ cmds=(
     "curl wtfismyip.com/text"          # (4/6)
     "curl ipaddr.ga"                   # (4/6)
     "curl api64.ipify.org"             # (4/6)
+    "curl v4v6.ipv6-test.com/api/myip.php" # (4/6)
 )
 
+set -x
 eval "${cmds[$RANDOM % ${#cmds[@]}]}"
 
 # macos
