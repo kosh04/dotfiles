@@ -21,3 +21,8 @@ if ($IsWindows) {
 # PSReadLine
 # https://docs.microsoft.com/en-us/powershell/module/psreadline/?view=powershell-7
 Set-PSReadLineKeyHandler -Key Tab -Function MenuComplete
+
+## Theme
+Import-Module posh-git
+Import-Module oh-my-posh
+Set-Theme Paradox
