@@ -28,7 +28,8 @@ document typeof
 Print data type of expression EXP (alias to `whatis').
 end
 
-define print_argv
+define print-argv
+  printf "Type 'p *argv@argc' or 'show args'\n"
   p *argv@argc
 end
 

@@ -21,6 +21,17 @@ $ dotfiles checkout
 
 ## Tips
 
+### 試験的な設定
+
+Git 設定を以下のように変えることで `.dotfiles.git` ディレクトリ内に限って
+git コマンドが利用できるようになる。
+プロンプト用関数 `__git_ps1` も利用可能。
+
+``` shell
+$ dotfiles config core.bare false
+$ dotfiles config core.worktree $HOME
+```
+
 ### Using Tig (text-mode interface for Git)
 
 ```sh
@@ -38,7 +49,7 @@ $ dotfiles tig
 XDG_CONFIG_HOME=$HOME/.config
 XDG_CACHE_HOME =$HOME/.cache
 XDG_DATA_HOME  =$HOME/.local/share
-XDG_RUNTIME_DIR=#unknown
+XDG_RUNTIME_DIR=#unknown (/run/user/<UID> on Linux)
 XDG_DATA_DIRS  =/usr/local/share:/usr/share
 XDG_CONFIG_DIRS=/etc/xdg
 ```

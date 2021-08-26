@@ -9,11 +9,24 @@ local green="\[\e[32m\]"        # $(tput setaf 2)
 local blue="\[\e[34m\]"         # $(tput setaf 4)
 local reset="\[\e[0m\]"         # $(tput sgr0)
 
+if [ -z "$INSIDE_EMACS" ]; then
+    printf '\[$(_ps1_rightprompt)\]'
+fi
+
 if command -v __git_ps1 >/dev/null; then
-echo "[${bold}${red}\u${green}@${blue}\h${reset} \W]\$(__git_ps1)\\$ "
+echo "[${bold}${red}\u${green}@${blue}\h${reset} \W]\$(__git_ps1)\\n\\$ "
 else
 echo "[${bold}${red}\u${green}@${blue}\h${reset} \W]\\$ "
 fi
+}
+
+# TODO: How to write right prompt in bash "\\D{%F %T}"
+_ps1_rightprompt() {
+	local sc="\x1b7" # tput sc (Save cursor)
+	local rc="\x1b8" # tput rc (Restore cursor)
+#	local date="$(date '+%FT%T')"
+	local date="$(date '+%H:%M')"
+	printf "${sc}%*s${rc}" "$COLUMNS" "[$date]"
 }
 
 PS1=$(_ps1)
@@ -45,7 +58,7 @@ _dotfiles_ready()
         unset GIT_WORK_TREE
     fi
 }
-PROMPT_COMMAND="_dotfiles_ready;${PROMPT_COMMAND}"
+#PROMPT_COMMAND="_dotfiles_ready;${PROMPT_COMMAND}"
 
 # エラーコードの表示 (optional)
 _exit_status() {

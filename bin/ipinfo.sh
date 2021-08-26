@@ -1,6 +1,9 @@
 #!/bin/bash
 set -euo pipefail
 
+# TODO: 引数の IP 情報を得る機能を追加したい
+# curl https://ipinfo.io/1.1.1.1
+
 # NOTE: force IPv4 or IPv6 lookup?
 # Use command flags, e.g. "dig -[46]", "curl -[46]"
 cmds=(
