@@ -1,2 +1,5 @@
 alias gdb-dashboard='gdb --command=~/.local/share/gdb-dashboard/.gdbinit'
 alias em='emacsclient -t'
+alias diff='diff --strip-trailing-cr -up'
+alias diff-dir='diff -uprN'
+alias top='top -c -d1'
