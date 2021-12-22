@@ -1,5 +1,5 @@
 #!/bin/bash
-. use-strict.bash.env
+set -euo pipefail
 
 calc() { echo "$@" | bc; }
 #calc() { bc <<<"$@"; }
