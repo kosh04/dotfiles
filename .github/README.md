@@ -1,4 +1,4 @@
-# dotfiles [![Build Status](https://travis-ci.com/kosh04/dotfiles.svg?token=dfMzF3xay83G8zNxrhrj&branch=master)](https://travis-ci.com/kosh04/dotfiles)
+# dotfiles [![Build Status](https://app.travis-ci.com/kosh04/dotfiles.svg?branch=master)](https://app.travis-ci.com/kosh04/dotfiles)
 
 My homedir dotfiles and scripts ☕
 
