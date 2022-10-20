@@ -4,6 +4,8 @@
 
 [include]
 	path = ./config_local
+[init]
+	defaultBranch = main
 [user]
 	name = kosh04
 	email = shigeru.kb@gmail.com
