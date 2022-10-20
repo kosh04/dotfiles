@@ -32,7 +32,6 @@
 	conflicts = diff --name-only --diff-filter=U #--cached
 	## Sync with remote, overwrite local changes
 	fetch-clean = !git fetch origin && git reset --hard origin/master && git clean -f -d
-	tig = !tig
 	guides = help -g
 	## Listing
 	tags = tag -l
@@ -45,6 +44,7 @@
 #	# コマンドの推測＋自動実行 (誤爆する可能性がありそう..)
 #	autocorrect = 1
 [tig]
+	## https://jonas.github.io/tig/doc/tigrc.5.html
 	mouse = true
 	wrap-lines = true
 #	line-graphics = utf-8

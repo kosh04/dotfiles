@@ -62,15 +62,15 @@ _dotfiles_ready()
 
 # エラーコードの表示 (optional)
 _exit_status() {
-    local status=$?
+    local _status=$?	  # NOTE: $status is read-only variable in zsh
     local red="\e[31m"
     local green="\e[32m"
     local reset="\e[0m"
 
-    if [[ $status == 0 ]]; then
+    if [[ $_status == 0 ]]; then
         echo -e "${green}(*'-')${reset}"
     else
-        echo -e "${red}(*;-;) #${status} at $(date '+%FT%T'%z)${reset}"
+        echo -e "${red}(*;-;) #${_status} at $(date '+%FT%T'%z)${reset}"
     fi
 }
 trap _exit_status ERR
