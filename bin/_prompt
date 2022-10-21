@@ -14,9 +14,9 @@ if [ -z "$INSIDE_EMACS" ]; then
 fi
 
 if command -v __git_ps1 >/dev/null; then
-echo "[${bold}${red}\u${green}@${blue}\h${reset} \W]\$(__git_ps1)\\n\\$ "
+echo "[${bold}${red}\u${green}@${blue}\h${reset} \w]\$(__git_ps1)\\n\\$ "
 else
-echo "[${bold}${red}\u${green}@${blue}\h${reset} \W]\\$ "
+echo "[${bold}${red}\u${green}@${blue}\h${reset} \w]\\$ "
 fi
 }
 
