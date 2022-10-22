@@ -1,0 +1,14 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Keyboard Layout]
+"Scancode Map"=hex:00,00,00,00,00,00,00,00,02,00,00,00,1d,00,3a,00,00,00,00,00
+
+; https://learn.microsoft.com/en-us/sysinternals/downloads/ctrl2cap
+; https://learn.microsoft.com/en-us/windows-hardware/drivers/hid/keyboard-and-mouse-class-drivers#scan-code-mapper-for-keyboards
+; https://learn.microsoft.com/ja-jp/windows-hardware/drivers/hid/keyboard-and-mouse-class-drivers#scan-code-mapper-for-keyboards
+
+; 0000 0000: Header: Version
+; 0000 0000: Header: Flags
+; 0200 0000: 2 entries in the map (including null entry)
+; 1d00 3a00: Caps Lock (0x3a) -> Left Ctrl (0x1d)
+; 0000 0000: Null terminator
