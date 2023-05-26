@@ -7,6 +7,8 @@
 [user]
 	name = kosh04
 	email = shigeru.kb@gmail.com
+[core]
+	autocrlf = false
 [color]
 	ui = auto
 [alias]
@@ -47,7 +49,10 @@
 [tig]
 	mouse = true
 	wrap-lines = true
-#	line-graphics = utf-8
+	# FIXME: tig.exe v2.5.1 default,utf-8 が文字化けする
+	# ただし "git exec tig" のように git プロセスを経由した場合に限る。
+	# tig.exe を直接実行した場合は問題ないため、自分の設定が悪い？
+	line-graphics = ascii
 #	truncation-delimiter = utf-8
 	main-view = id date author commit-title:graph=yes,refs=yes
 #	main-view = id date:default author:full commit-title:yes,graph,refs,overflow=no

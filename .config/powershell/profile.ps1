@@ -26,3 +26,18 @@ Set-PSReadLineKeyHandler -Key Tab -Function MenuComplete
 Import-Module posh-git
 Import-Module oh-my-posh
 Set-Theme Paradox
+
+## Functions
+
+# ファイルの場所を開く
+function Explorer-Command {
+    param(
+        [string]$name,
+        [switch]$cd
+    )
+    if ($cd) {
+        Get-Command $name | Split-Path | Set-Location
+    } else {
+        Get-Command $name | Split-Path | Invoke-Item    
+    }
+}
