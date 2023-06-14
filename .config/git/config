@@ -28,10 +28,13 @@
 	env = !env | grep ^GIT
 	##### comit (or -C HEAD, --reuse-message=@)
 	amend = commit --amend --no-edit
+	undo = !git reset --hard HEAD@{1} && git clean -fd
 	##### branch (branch-current)
 	bc = rev-parse --abbrev-ref HEAD
 	## git -C /path/to/gitrepo tig ARGS...
 	tig = !tig
+	## GitK (or git-gui)
+	gitk = !gitk
 	## List all conflicted files. https://stackoverflow.com/q/3065650/4499880
 	conflicts = diff --name-only --diff-filter=U #--cached
 	## Sync with remote, overwrite local changes
