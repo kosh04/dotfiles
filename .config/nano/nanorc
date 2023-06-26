@@ -11,3 +11,4 @@ set tabsize 8		# [-T, --tabsize=cols]
 set historylog		# [-H, --historylog] ~/.nano.history
 unset tabstospaces	# [-E, --tabstospaces] use spaces instead of tabs
 set nowrap		# [-w, --nowrap] Don't wrap text at all.
+set linenumbers         # [-l, --line-numbers]

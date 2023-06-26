@@ -13,3 +13,7 @@ alias getifaddr='ipconfig getifaddr en0'
 # NOTE: Safariの"開発>[Your macOS]>JSContextsのWebインスペクタを自動的に表示"を有効にしておくとデバッガが利用可能になる
 alias jxa='osascript -lJavaScript -i'
 alias jxa_debug='osascript -lJavaScript -e "debugger"'
+
+# SDKROOT=$(xcrun --sdk macosx --show-sdk-path)
+# export SDKROOT
+# export CPATH=${SDKROOT}/usr/include

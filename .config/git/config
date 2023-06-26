@@ -4,6 +4,8 @@
 
 [include]
 	path = ./config_local
+[init]
+	defaultBranch = main
 [user]
 	name = kosh04
 	email = shigeru.kb@gmail.com
@@ -26,15 +28,17 @@
 	env = !env | grep ^GIT
 	##### comit (or -C HEAD, --reuse-message=@)
 	amend = commit --amend --no-edit
+	undo = !git reset --hard HEAD@{1} && git clean -fd
 	##### branch (branch-current)
 	bc = rev-parse --abbrev-ref HEAD
 	## git -C /path/to/gitrepo tig ARGS...
 	tig = !tig
+	## GitK (or git-gui)
+	gitk = !gitk
 	## List all conflicted files. https://stackoverflow.com/q/3065650/4499880
 	conflicts = diff --name-only --diff-filter=U #--cached
 	## Sync with remote, overwrite local changes
 	fetch-clean = !git fetch origin && git reset --hard origin/master && git clean -f -d
-	tig = !tig
 	guides = help -g
 	## Listing
 	tags = tag -l
@@ -47,6 +51,7 @@
 #	# コマンドの推測＋自動実行 (誤爆する可能性がありそう..)
 #	autocorrect = 1
 [tig]
+	## https://jonas.github.io/tig/doc/tigrc.5.html
 	mouse = true
 	wrap-lines = true
 	# FIXME: tig.exe v2.5.1 default,utf-8 が文字化けする
