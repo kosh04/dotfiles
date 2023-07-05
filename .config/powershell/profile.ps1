@@ -41,3 +41,12 @@ function Explorer-Command {
         Get-Command $name | Split-Path | Invoke-Item    
     }
 }
+
+function setenv {
+	param(
+		[Parameter(Mandatory)]
+		[string]$name,
+		[string]$value
+	)
+	[System.Environment]::SetEnvironmentVariable($name, $value)
+}

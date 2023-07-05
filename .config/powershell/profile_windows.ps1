@@ -12,3 +12,7 @@ function mklink {
 
 #$OutputEncoding=[System.Text.Encoding]::UTF8
 #chcp 65001
+
+function dotfiles {
+	git --git-dir="$HOME\.dotfiles.git" --work-tree="$HOME" $args
+}
