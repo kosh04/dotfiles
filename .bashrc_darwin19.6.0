@@ -6,7 +6,6 @@ alias updatedb='sudo /usr/libexec/locate.updatedb'
 alias clip=pbcopy
 alias ldd='otool -L'
 alias notepad='open -t'
-alias realpath=grealpath
 alias getifaddr='ipconfig getifaddr en0'
 
 # JavaScript for Automation
@@ -17,3 +16,14 @@ alias jxa_debug='osascript -lJavaScript -e "debugger"'
 # SDKROOT=$(xcrun --sdk macosx --show-sdk-path)
 # export SDKROOT
 # export CPATH=${SDKROOT}/usr/include
+
+gnubin() {
+    local gpath=/usr/local/opt/coreutils/libexec/gnubin
+    if [ $# -eq 0 ]; then
+        echo "Usage: ${FUNCNAME[0]} COMMAND [ARGS]..." 1>&2
+        ls $gpath 1>&2
+        return
+    fi
+    # NOTE: You can also use these commands name with prefix "g". (ls -> gls)
+    PATH="$gpath:$PATH" "$@"
+}
