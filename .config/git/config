@@ -13,6 +13,8 @@
 	autocrlf = false
 [color]
 	ui = auto
+[merge]
+	conflictstyle = zdiff3
 [alias]
         alias = config --get-regexp '^alias\\.'
 	graph = log --graph --oneline --decorate=full
