@@ -1,0 +1,4 @@
+https://github.com/jonas/tig/blob/master/NEWS.adoc#tig-22
+
+- Persist readline history to `~/.tig_history` or `$XDG_DATA_HOME/tig/history`.
+Use `history-size` to control the number of entires to save.
