@@ -1,6 +1,13 @@
-@rem Require Administrators
-rem Windows ãƒ©ã‚¤ã‚»ãƒ³ã‚¹èªè¨¼ã¨ãƒ—ãƒ­ãƒ€ã‚¯ãƒˆã‚­ãƒ¼ã‚’ç¢ºèªã™ã‚‹
+@echo off
+rem Require Administrators (?)
+rem Windows ƒ‰ƒCƒZƒ“ƒX”FØ‚Æƒvƒƒ_ƒNƒgƒL[‚ğŠm”F‚·‚é
 
-@wmic path softwarelicensingservice get OA3xOriginalProductKey
-::@powershell -Command "(Get-WmiObject -query 'select * from SoftwareLicensingService').OA3xOriginalProductKey"
-::@slmgr.vbs /dli
+wmic path softwarelicensingservice get OA3xOriginalProductKey
+::powershell -Command "(Get-WmiObject -query 'select * from SoftwareLicensingService').OA3xOriginalProductKey"
+
+::slmgr.vbs /dli
+
+rem === NOTE: Windows ƒ‰ƒCƒZƒ“ƒXŒ`‘Ô
+rem VL (Volume License) Šé‹ÆA’c‘ÌŒü‚¯
+rem OEM (Original Equipment Manufacturer) ƒvƒŠƒCƒ“ƒXƒg[ƒ‹
+rem DSP (Delivery Service Partner) ©ìƒpƒ\ƒRƒ“‚È‚Ç
