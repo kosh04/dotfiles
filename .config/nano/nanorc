@@ -1,7 +1,12 @@
+# .nanorc -- GNU nano ~v7.2
+
+# see also:
+# - https://nano-editor.org/dist/latest/nanorc.5.html
+# - https://nano-editor.org/dist/latest/ChangeLog
+
 unset autoindent	# [-i, --autoindent]
 set casesensitive	# onsearch
 #unset const		# [-c, --const] always show line/cursor position status line
-set suspend		# [-z, --suspend] Enable suzpend (Ctrl-Z)
 unset noconvert		# [-N, --noconvert] dont't convert from DOS
 unset nohelp		# [-x, --nohelp] no bottom help
 set quickblank		# [-U, --quickblank] clear bottom status after 1 keystroke
@@ -12,5 +17,14 @@ set nowrap		# [-w, --nowrap] Don't wrap text at all.
 set linenumbers         # [-l, --line-numbers]
 
 ## Deprecated Options
+
 #set morespace		# [-O, --morespace] no top blank line
 #set smooth		# [-S, --smooth] scoll smooth without jumping cursor to center
+
+# Option -z (--suspendable) has been removed. (v6.0~v6.4)
+# Suspension is enabled by default, reachable via ^T^Z.
+#set suspend		# [-z, --suspend] Enable suzpend (Ctrl-Z)
+
+# Local Variables:
+# mode: conf-space
+# End:
