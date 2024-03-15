@@ -1,9 +1,10 @@
 # Manual:
 #   - man git-config
 #   - https://git-scm.com/docs/git-config
+# Other Links:
+#   - https://www.gitalias.com/
+#   - https://jvns.ca/blog/2024/02/16/popular-git-config-options/
 
-[include]
-	path = ./config_local
 [init]
 	defaultBranch = main
 [user]
@@ -14,7 +15,17 @@
 [color]
 	ui = auto
 [merge]
-	conflictstyle = zdiff3
+	# Git v2.35 supports "zdiff3" mode.
+	# BUT now v2.24.3 (Apple Git-128)
+	conflictstyle = diff3
+# [push] # v2.37.0~
+# 	autoSetupRemote = true
+[diff]
+	# myers,minimal,patience,histogram(,default)
+	algorithm = histogram
+[log]
+	date = iso8601
+
 [alias]
         alias = config --get-regexp '^alias\\.'
 	graph = log --graph --oneline --decorate=full
@@ -49,9 +60,11 @@
 	## Submodule
 	submodule-update-latest = submodule update --remote --recursive # <path>
 	submodule-update-all = submodule foreach git pull # origin master
-#[help]
-#	# コマンドの推測＋自動実行 (誤爆する可能性がありそう..)
-#	autocorrect = 1
+
+[help]
+	# コマンド打ち間違い時の推測＆自動実行 (ms; 誤爆に注意)
+	autocorrect = 50
+
 [tig]
 	## https://jonas.github.io/tig/doc/tigrc.5.html
 	mouse = true
@@ -67,9 +80,15 @@
 	generic = * :source ~/.config/git/config
 	generic = ~ :toggle wrap-lines
 	generic = <Backspace> move-page-up
+
 # Auto added by ??
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+
+[include]
+	path = ./config_local
+[includeIf "gitdir:~/.dotfiles.git"]
+	path = config_dotfiles
