@@ -27,3 +27,5 @@ gnubin() {
     # NOTE: You can also use these commands name with prefix "g". (ls -> gls)
     PATH="$gpath:$PATH" "$@"
 }
+
+alias emacsclient=/Applications/Emacs.app/Contents/MacOS/bin/emacsclient
