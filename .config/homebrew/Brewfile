@@ -1,44 +1,138 @@
 tap "homebrew/bundle"
-tap "homebrew/cask"
+tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
-tap "homebrew/core"
 tap "homebrew/services"
-# Command-line interface for SQLite
-brew "sqlite"
+tap "teamookla/speedtest"
+# C++ Common Libraries
+brew "abseil"
+# Performance-portable, length-agnostic SIMD with runtime dispatch
+brew "highway"
+# Library of 2D and 3D vector, matrix, and math operations
+brew "imath"
+# General-purpose data compression with high compression ratio
+brew "xz"
+# Zstandard is a real-time compression algorithm
+brew "zstd"
+# High dynamic-range image file format
+brew "openexr"
+# Image format providing lossless and lossy compression for web images
+brew "webp"
+# New file format for still image compression
+brew "jpeg-xl"
+# Codec library for encoding and decoding AV1 video streams
+brew "aom"
+# Collection of portable C++ source libraries
+brew "boost"
+# Cryptography and SSL/TLS Toolkit
+brew "openssl@1.1"
+# Text processor and publishing toolchain for AsciiDoc
+brew "asciidoctor"
 # Record and share terminal sessions
 brew "asciinema"
 # Spell checker with better logic than ispell
 brew "aspell"
+# MPEG-4 command-line tool
+brew "atomicparsley"
 # Bourne-Again SHell, a UNIX command interpreter
 brew "bash"
+# Asynchronous DNS library
+brew "c-ares"
+# Open-source formatting library for C++
+brew "fmt"
+# Protocol buffers (Google's data interchange format)
+brew "protobuf"
+# Alternative to backtracking PCRE-style regular expression engines
+brew "re2"
+# Next generation open source RPC library and framework
+brew "grpc"
+# Super fast C++ logging library
+brew "spdlog"
 # Generate compilation database for clang tooling
 brew "bear"
 # GNU File, Shell, and Text utilities
 brew "coreutils"
+# Text-based UI library
+brew "ncurses"
+# Terminal multiplexer
+brew "tmux"
 # Text-based window manager and terminal multiplexer
 brew "byobu"
+# Software library to render fonts
+brew "freetype"
+# XML-based font configuration API for X Windows
+brew "fontconfig"
 # Core application library for C
 brew "glib"
-# Manage compile and link flags for libraries
-brew "pkg-config"
-# Next-gen compiler infrastructure
-brew "llvm"
+# X.Org: Interface to the X Window System protocol
+brew "libxcb"
+# X.Org: Core X11 protocol client library
+brew "libx11"
+# C string library for manipulating Unicode strings
+brew "libunistring"
+# C library implementing the SSH2 protocol
+brew "libssh2"
+# Get a file from an HTTP, HTTPS or FTP server
+brew "curl"
+# C library of Git core methods that is re-entrant and linkable
+brew "libgit2"
+# Helper program to build and install c-like libraries
+brew "cargo-c"
+# High-performance theorem prover
+brew "z3"
 # C/C++/ObjC language server
 brew "ccls"
+# Ultralightweight JSON parser in ANSI C
+brew "cjson"
 # Cross-platform make
 brew "cmake"
 # Migemo is a tool that supports Japanese incremental search with Romaji
 brew "cmigemo"
+# Unit testing framework for C
+brew "cmocka"
+# Message bus system, providing inter-application communication
+brew "dbus"
+# Secure runtime for JavaScript and TypeScript
+brew "deno"
 # File comparison utilities
 brew "diffutils"
-# GNU Transport Layer Security (TLS) Library
-brew "gnutls"
-# Image manipulation library
-brew "jpeg"
-# Play, record, convert, and stream audio and video
-brew "ffmpeg"
+# Text processing system for reStructuredText
+brew "docutils"
+# Free lossless audio codec
+brew "flac"
+# Integer Set Library for the polyhedral model
+brew "isl"
+# C library for multiple-precision floating-point computations
+brew "mpfr"
+# GNU compiler collection
+brew "gcc"
 # GNU debugger
 brew "gdb"
+# GitHub command-line tool
+brew "gh"
+# Library for JPEG-2000 image manipulation
+brew "openjpeg"
+# Interpreter for PostScript and PDF
+brew "ghostscript"
+# Git extension for versioning large files
+brew "git-lfs"
+# Command-line option parsing utility
+brew "gnu-getopt"
+# Low-level cryptographic library
+brew "nettle"
+# Validating, recursive, caching DNS resolver
+brew "unbound"
+# GNU Transport Layer Security (TLS) Library
+brew "gnutls"
+# Cryptographic library based on the code from GnuPG
+brew "libgcrypt"
+# Open source programming language to build simple/reliable/efficient software
+brew "go"
+# Manage compile and link flags for libraries
+brew "pkg-config"
+# Generate introspection data for GObject libraries
+brew "gobject-introspection"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.10"
 # Colorize logfiles and command output
 brew "grc"
 # Improved top (interactive process viewer)
@@ -47,18 +141,52 @@ brew "htop"
 brew "hugo"
 # Spell checker and morphological analyzer
 brew "hunspell"
+# Open h.265 video codec implementation
+brew "libde265"
+# ISO/IEC 23008-12:2017 HEIF file format decoder and encoder
+brew "libheif"
+# Tool Command Language
+brew "tcl-tk"
 # Tools and libraries to manipulate images in many formats
 brew "imagemagick"
 # C library for encoding, decoding, and manipulating JSON
 brew "jansson"
 # JSON output from a shell
 brew "jo"
+# Image manipulation library
+brew "jpeg"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
 # Simple terminal UI for git commands
 brew "lazygit"
+# Multi-format archive and compression library
+brew "libarchive"
+# Subtitle renderer for the ASS/SSA subtitle format
+brew "libass"
+# JIT library for the GNU compiler collection
+brew "libgccjit"
+# X.Org: pthread-stubs.pc
+brew "libpthread-stubs"
+# Cryptographic & SSL/TLS library
+brew "mbedtls"
+# Reliable Internet Stream Transport (RIST)
+brew "librist"
+# Framework for layout and rendering of i18n text
+brew "pango"
 # Library to render SVG files using Cairo
 brew "librsvg"
+# MP3 player for Linux and UNIX
+brew "mpg123"
+# Audio codec
+brew "opus"
+# C library for files containing sampled sound
+brew "libsndfile"
+# VP8/VP9 video codec
+brew "libvpx"
+# Portable tool for LLVM- and Clang-style test suites
+brew "lit"
+# Next-gen compiler infrastructure
+brew "llvm"
 # Powerful multi-lingual file viewer/grep
 brew "lv"
 # Java-based project management
@@ -67,38 +195,86 @@ brew "maven"
 brew "mecab"
 # IPA dictionary compiled for MeCab
 brew "mecab-ipadic"
+# Fast and user friendly build system
+brew "meson"
+# Netwide Assembler (NASM) is an 80x86 assembler
+brew "nasm"
+# HTTP/2 C Library
+brew "nghttp2"
 # Network Kanji code conversion Filter (NKF)
 brew "nkf"
 # Port scanning utility for large networks
 brew "nmap"
-# Password manager
-brew "pass"
+# Platform built on V8 to build network applications
+brew "node"
+# Libraries for security-enabled client and server applications
+brew "nss"
+# API for decoding and seeking in .opus files
+brew "opusfile"
+# Swiss-army knife of markup format conversion
+brew "pandoc"
+# PDF rendering library (based on the xpdf-3.0 code base)
+brew "poppler"
 # Monitor data's progress through a pipe
 brew "pv"
+# Generic syntax highlighter
+brew "pygments"
+# Fastest and safest AV1 video encoder
+brew "rav1e"
+# Install various Ruby versions and implementations
+brew "ruby-build"
+# Ruby version manager
+brew "rbenv"
+# Persistent key-value database, with built-in net interface
+brew "redis"
 # Readline wrapper: adds readline support to tools that lack it
 brew "rlwrap"
+# Safe, concurrent, practical language
+brew "rust"
+# Low-level access to audio, keyboard, mouse, joystick, and graphics
+brew "sdl2"
 # Static analysis and lint tool, for (ba)sh scripts
 brew "shellcheck"
+# Compression/decompression library aiming for high speed
+brew "snappy"
+# SOund eXchange: universal sound sample translator
+brew "sox"
+# Secure Reliable Transport
+brew "srt"
 # Organize software neatly under a single directory tree (e.g. /usr/local)
 brew "stow"
 # CLI for extracting streams from various websites to a video player
 brew "streamlink"
 # User interface to the TELNET protocol
 brew "telnet"
+# Official documentation format of the GNU project
+brew "texinfo"
 # Code-search similar to ack
 brew "the_silver_searcher"
 # Text interface for Git repositories
 brew "tig"
+# Display directories as trees (with optional color/HTML output)
+brew "tree"
 # Extract, view, and test RAR archives
 brew "unrar"
+# X.Org: Set of autoconf macros used to build other xorg packages
+brew "util-macros"
 # Sends magic packets to wake up network-devices
 brew "wakeonlan"
 # Internet file retriever
 brew "wget"
 # Run Windows applications without a copy of Microsoft Windows
 brew "wine"
+# X.Org: X Network Transport layer shared code
+brew "xtrans"
 # Download YouTube videos from the command-line
 brew "youtube-dl"
+# Scaling, colorspace conversion, and dithering library
+brew "zimg"
+# Ookla Speedtest
+brew "teamookla/speedtest/speedtest"
+# Developer targeted fonts with a high number of glyphs
+cask "font-hack-nerd-font"
 # Password manager app
 cask "keepassxc"
 # Create, manage and debug system- and user services
@@ -107,3 +283,27 @@ cask "launchcontrol"
 cask "powershell"
 # Open-source version of the X.Org X Window System
 cask "xquartz"
+vscode "bowlerhatllc.vscode-as3mxml"
+vscode "bowlerhatllc.vscode-nextgenas"
+vscode "bowlerhatllc.vscode-swf-debug"
+vscode "ccls-project.ccls"
+vscode "eamodio.gitlens"
+vscode "golang.go"
+vscode "llvm-vs-code-extensions.vscode-clangd"
+vscode "ms-ceintl.vscode-language-pack-ja"
+vscode "ms-python.python"
+vscode "ms-python.vscode-pylance"
+vscode "ms-toolsai.jupyter"
+vscode "ms-toolsai.jupyter-keymap"
+vscode "ms-toolsai.jupyter-renderers"
+vscode "ms-toolsai.vscode-jupyter-cell-tags"
+vscode "ms-toolsai.vscode-jupyter-slideshow"
+vscode "ms-vscode.cpptools"
+vscode "redhat.java"
+vscode "visualstudioexptteam.intellicode-api-usage-examples"
+vscode "visualstudioexptteam.vscodeintellicode"
+vscode "vscjava.vscode-java-debug"
+vscode "vscjava.vscode-java-dependency"
+vscode "vscjava.vscode-java-pack"
+vscode "vscjava.vscode-java-test"
+vscode "vscjava.vscode-maven"
