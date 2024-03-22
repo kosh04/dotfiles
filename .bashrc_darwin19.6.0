@@ -2,6 +2,8 @@
 
 echo 1>&2 "call .bashrc_$OSTYPE"
 
+eval "$(brew shellenv)"
+
 alias updatedb='sudo /usr/libexec/locate.updatedb'
 alias clip=pbcopy
 alias ldd='otool -L'
