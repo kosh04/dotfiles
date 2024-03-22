@@ -29,7 +29,10 @@
 [alias]
         alias = config --get-regexp '^alias\\.'
 	graph = log --graph --oneline --decorate=full
+	overview = log --graph --oneline --all --simplify-by-decoration
 	gr = log --graph --date=short --decorate=short --pretty=format:'%Cgreen%h %Creset%cd %Cblue%cn %Cred%d %Creset%s'
+	tlog = log --stat --graph --pretty=format:'%C(green)%h%C(reset) (%ar) %s'
+	authors = shortlog -sne --no-merges
 	rename = mv
 	remove = rm
         st = status -sb
@@ -88,7 +91,9 @@
 	process = git-lfs filter-process
 	required = true
 
+# Allow local overrides
 [include]
 	path = ./config_local
+
 [includeIf "gitdir:~/.dotfiles.git"]
 	path = config_dotfiles
