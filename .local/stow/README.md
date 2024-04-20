@@ -9,7 +9,9 @@ export STOW_DIR="$HOME/.local/stow"
 ## Example: build and install emacs
 
 ```sh
+$ cd $STOW_DIR
 $ cd ~/src/emacs-x.x/ && ./configure --prefix="$HOME/.local/stow/emacs-x.x" && make install
+$ stow -D emacs-y.y # Remove old version 
 $ stow -S emacs-x.x
 $ ~/.local/bin/emacs
 ```

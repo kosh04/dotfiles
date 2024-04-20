@@ -63,3 +63,4 @@ XDG_CONFIG_DIRS=/etc/xdg
 
 [dotfiles.github.io]:https://dotfiles.github.io/
 [XDG Base Directory Specification]:https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html
+[chezmoi]:https://www.chezmoi.io/

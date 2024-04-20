@@ -2,7 +2,6 @@
 #   - man git-config
 #   - https://git-scm.com/docs/git-config
 # Other Links:
-#   - https://www.gitalias.com/
 #   - https://jvns.ca/blog/2024/02/16/popular-git-config-options/
 
 [init]
@@ -26,6 +25,7 @@
 [log]
 	date = iso8601
 
+# see also: https://www.gitalias.com/
 [alias]
         alias = config --get-regexp '^alias\\.'
 	graph = log --graph --oneline --decorate=full
@@ -42,6 +42,7 @@
 	last = log -1 HEAD
 	root = rev-parse --show-toplevel
 	env = !env | grep ^GIT
+	ls = ls-files ':(glob)*'
 	##### comit (or -C HEAD, --reuse-message=@)
 	amend = commit --amend --no-edit
 	undo = !git reset --hard HEAD@{1} && git clean -fd

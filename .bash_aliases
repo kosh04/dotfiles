@@ -1,11 +1,13 @@
 # -*- mode: shell-script -*-
+alias bye=logout
 alias gdb-dashboard='gdb --command=~/.local/share/gdb-dashboard/.gdbinit'
 alias em='emacsclient -t'
 alias diff='diff --strip-trailing-cr -up'
 alias diff-dir='diff -uprN'
 #alias top='top -c -d1'
 alias stow-dir='cd ${STOW_DIR?undefined}'
-alias cht=cheat.sh
+#alias cht=cheat.sh
+cht() { curl "cheat.sh/${1}"; }
 # 別物コマンドな気がするが一応
 alias tldr=cheat.sh
 

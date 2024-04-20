@@ -18,15 +18,16 @@ set convert-meta off
 set output-meta on
 set meta-flag on
 
-# 前置詞の長いコマンドの略称表示
+# 前置詞の長いコマンドの略称表示 [...]
 set completion-prefix-display-length 3
 
 # colorful & helpful
 set colored-completion-prefix on
-set colored-stats off
-set visible-stats off
+set colored-stats on
+set visible-stats on
 #set mark-symlinked-directories on
 set match-hidden-files off
 
 set menu-complete-display-prefix on #??
 TAB: menu-complete
+TAB: complete
