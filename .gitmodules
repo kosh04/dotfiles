@@ -8,3 +8,6 @@
 [submodule ".local/share/gdb-dashboard"]
 	path = .local/share/gdb-dashboard
 	url = https://github.com/cyrus-and/gdb-dashboard.git
+[submodule ".config/tmux/plugins/tpm"]
+	path = .config/tmux/plugins/tpm
+	url = https://github.com/tmux-plugins/tpm.git
