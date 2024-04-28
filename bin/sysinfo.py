@@ -23,6 +23,9 @@ sysinfo_commands = [
     {'cmd': ['cat', '/proc/version'], 'system': ['Linux', 'FreeBSD']},
     {'cmd': ['sw_vers'], 'system': ['Darwin']},
     {'cmd': ['hostinfo'], 'system': ['Darwin']},
+    {'cmd': ['sysctl', 'machdep.cpu.brand_string'], 'system': ['Darwin']},
+    {'cmd': ['system_profiler', 'SPSoftwareDataType', 'SPHardwareDataType',
+             'SPMemoryDataType', 'SPDisplaysDataType'], 'system': ['Darwin']},
     {'cmd': ['freebsd-version'], 'system': ['FreeBSD']},
 ]
 
