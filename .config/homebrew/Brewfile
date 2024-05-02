@@ -5,22 +5,10 @@ tap "homebrew/services"
 tap "teamookla/speedtest"
 # C++ Common Libraries
 brew "abseil"
-# Performance-portable, length-agnostic SIMD with runtime dispatch
-brew "highway"
-# Library of 2D and 3D vector, matrix, and math operations
-brew "imath"
 # General-purpose data compression with high compression ratio
 brew "xz"
 # Zstandard is a real-time compression algorithm
 brew "zstd"
-# High dynamic-range image file format
-brew "openexr"
-# Image format providing lossless and lossy compression for web images
-brew "webp"
-# New file format for still image compression
-brew "jpeg-xl"
-# Codec library for encoding and decoding AV1 video streams
-brew "aom"
 # Collection of portable C++ source libraries
 brew "boost"
 # Cryptography and SSL/TLS Toolkit
@@ -51,8 +39,6 @@ brew "spdlog"
 brew "bear"
 # GNU File, Shell, and Text utilities
 brew "coreutils"
-# Text-based UI library
-brew "ncurses"
 # Terminal multiplexer
 brew "tmux"
 # Text-based window manager and terminal multiplexer
@@ -62,7 +48,7 @@ brew "freetype"
 # XML-based font configuration API for X Windows
 brew "fontconfig"
 # Core application library for C
-brew "glib"
+brew "glib", link: false
 # X.Org: Interface to the X Window System protocol
 brew "libxcb"
 # X.Org: Core X11 protocol client library
@@ -77,8 +63,6 @@ brew "curl"
 brew "libgit2"
 # Helper program to build and install c-like libraries
 brew "cargo-c"
-# High-performance theorem prover
-brew "z3"
 # C/C++/ObjC language server
 brew "ccls"
 # Ultralightweight JSON parser in ANSI C
@@ -91,8 +75,6 @@ brew "cmigemo"
 brew "cmocka"
 # Message bus system, providing inter-application communication
 brew "dbus"
-# Secure runtime for JavaScript and TypeScript
-brew "deno"
 # File comparison utilities
 brew "diffutils"
 # Text processing system for reStructuredText
@@ -123,6 +105,8 @@ brew "nettle"
 brew "unbound"
 # GNU Transport Layer Security (TLS) Library
 brew "gnutls"
+# Common error values for all GnuPG components
+brew "libgpg-error"
 # Cryptographic library based on the code from GnuPG
 brew "libgcrypt"
 # Open source programming language to build simple/reliable/efficient software
@@ -135,20 +119,16 @@ brew "gobject-introspection"
 brew "python@3.10"
 # Colorize logfiles and command output
 brew "grc"
+# Performance-portable, length-agnostic SIMD with runtime dispatch
+brew "highway"
 # Improved top (interactive process viewer)
 brew "htop"
 # Configurable static site generator
 brew "hugo"
 # Spell checker and morphological analyzer
 brew "hunspell"
-# Open h.265 video codec implementation
-brew "libde265"
-# ISO/IEC 23008-12:2017 HEIF file format decoder and encoder
-brew "libheif"
-# Tool Command Language
-brew "tcl-tk"
-# Tools and libraries to manipulate images in many formats
-brew "imagemagick"
+# Library of 2D and 3D vector, matrix, and math operations
+brew "imath"
 # C library for encoding, decoding, and manipulating JSON
 brew "jansson"
 # JSON output from a shell
@@ -159,22 +139,22 @@ brew "jpeg"
 brew "jq"
 # Simple terminal UI for git commands
 brew "lazygit"
+# Image format providing lossless and lossy compression for web images
+brew "webp"
 # Multi-format archive and compression library
 brew "libarchive"
-# Subtitle renderer for the ASS/SSA subtitle format
-brew "libass"
+# Open h.265 video codec implementation
+brew "libde265"
 # JIT library for the GNU compiler collection
 brew "libgccjit"
+# Tool Command Language
+brew "tcl-tk"
 # X.Org: pthread-stubs.pc
 brew "libpthread-stubs"
 # Cryptographic & SSL/TLS library
 brew "mbedtls"
 # Reliable Internet Stream Transport (RIST)
 brew "librist"
-# Framework for layout and rendering of i18n text
-brew "pango"
-# Library to render SVG files using Cairo
-brew "librsvg"
 # MP3 player for Linux and UNIX
 brew "mpg123"
 # Audio codec
@@ -183,14 +163,12 @@ brew "opus"
 brew "libsndfile"
 # VP8/VP9 video codec
 brew "libvpx"
-# Portable tool for LLVM- and Clang-style test suites
-brew "lit"
+# High-performance theorem prover
+brew "z3"
 # Next-gen compiler infrastructure
 brew "llvm"
 # Powerful multi-lingual file viewer/grep
 brew "lv"
-# Java-based project management
-brew "maven"
 # Yet another part-of-speech and morphological analyzer
 brew "mecab"
 # IPA dictionary compiled for MeCab
@@ -205,16 +183,10 @@ brew "nghttp2"
 brew "nkf"
 # Port scanning utility for large networks
 brew "nmap"
-# Platform built on V8 to build network applications
-brew "node"
 # Libraries for security-enabled client and server applications
 brew "nss"
 # API for decoding and seeking in .opus files
 brew "opusfile"
-# Swiss-army knife of markup format conversion
-brew "pandoc"
-# PDF rendering library (based on the xpdf-3.0 code base)
-brew "poppler"
 # Monitor data's progress through a pipe
 brew "pv"
 # Generic syntax highlighter
@@ -231,10 +203,6 @@ brew "redis"
 brew "rlwrap"
 # Safe, concurrent, practical language
 brew "rust"
-# Low-level access to audio, keyboard, mouse, joystick, and graphics
-brew "sdl2"
-# Static analysis and lint tool, for (ba)sh scripts
-brew "shellcheck"
 # Compression/decompression library aiming for high speed
 brew "snappy"
 # SOund eXchange: universal sound sample translator
@@ -245,8 +213,6 @@ brew "srt"
 brew "stow"
 # CLI for extracting streams from various websites to a video player
 brew "streamlink"
-# User interface to the TELNET protocol
-brew "telnet"
 # Official documentation format of the GNU project
 brew "texinfo"
 # Code-search similar to ack
@@ -259,12 +225,16 @@ brew "tree"
 brew "unrar"
 # X.Org: Set of autoconf macros used to build other xorg packages
 brew "util-macros"
+# Vi 'workalike' with many additional features
+brew "vim"
 # Sends magic packets to wake up network-devices
 brew "wakeonlan"
 # Internet file retriever
 brew "wget"
 # Run Windows applications without a copy of Microsoft Windows
 brew "wine"
+# H.265/HEVC encoder
+brew "x265"
 # X.Org: X Network Transport layer shared code
 brew "xtrans"
 # Download YouTube videos from the command-line
@@ -291,6 +261,7 @@ vscode "eamodio.gitlens"
 vscode "golang.go"
 vscode "llvm-vs-code-extensions.vscode-clangd"
 vscode "ms-ceintl.vscode-language-pack-ja"
+vscode "ms-python.debugpy"
 vscode "ms-python.python"
 vscode "ms-python.vscode-pylance"
 vscode "ms-toolsai.jupyter"
