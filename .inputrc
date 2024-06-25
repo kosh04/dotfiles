@@ -7,6 +7,7 @@
 # - bind -p (List functions)
 # - bind -v (List variables)
 # - bind -p FUNCTION (Query where-is the named FUNCTION binding)
+# - bind -s (List key macros)
 # - bind -f ~/.inputrc
 # - "\C-x\C-r": re-read-init-file ()
 # - $include .inputrc
@@ -31,3 +32,10 @@ set match-hidden-files off
 set menu-complete-display-prefix on #??
 TAB: menu-complete
 TAB: complete
+
+# TODO: 定型文マクロをここに書くと便利？
+"\el":"\C-e | less"
+"\eC":"\C-aLANG=C \C-e"
+"\e;":">/dev/null"
+"\e:":">/dev/null 2>&1"
+#"\es":"C-asudoC-e" # Should use `sudo !!`

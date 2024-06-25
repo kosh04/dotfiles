@@ -23,9 +23,13 @@ if ($IsWindows) {
 Set-PSReadLineKeyHandler -Key Tab -Function MenuComplete
 
 ## Theme
+# FIXME: darwin テーマ適用後に応答ごとに端末ベルが鳴って煩わしい
+# FIXME: linux モジュール自体インストールできない
+if ($IsWindows) {
 Import-Module posh-git
 Import-Module oh-my-posh
-Set-Theme Paradox
+Set-Theme Paradox    
+}
 
 ## Functions
 

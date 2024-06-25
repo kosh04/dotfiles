@@ -53,6 +53,11 @@ XDG_DATA_DIRS  =/usr/local/share:/usr/share
 XDG_CONFIG_DIRS=/etc/xdg
 ```
 
+## Similar dotfiles manager
+
+- [yadm](https://yadm.io/ "Yet Another Dotfiles Manager")
+- [chezmoi](https://www.chezmoi.io/ "Manage your dotfiles across multiple machines")
+
 ## Other Links
 
 - [dotfiles.github.io]

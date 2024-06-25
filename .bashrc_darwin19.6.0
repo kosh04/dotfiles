@@ -4,6 +4,9 @@ echo 1>&2 "call .bashrc_$OSTYPE"
 
 eval "$(brew shellenv)"
 
+# NOTE: airport is deprecated since macOS Sonoma 14.4 (and use "wdutil")
+alias airport=/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport
+
 alias updatedb='sudo /usr/libexec/locate.updatedb'
 alias clip=pbcopy
 alias ldd='otool -L'
@@ -14,6 +17,8 @@ alias getifaddr='ipconfig getifaddr en0'
 # NOTE: Safariの"開発>[Your macOS]>JSContextsのWebインスペクタを自動的に表示"を有効にしておくとデバッガが利用可能になる
 alias jxa='osascript -lJavaScript -i'
 alias jxa_debug='osascript -lJavaScript -e "debugger"'
+
+alias tftp_server='sudo launchctl load -w /System/Library/LaunchDaemons/tftp.plist'
 
 # SDKROOT=$(xcrun --sdk macosx --show-sdk-path)
 # export SDKROOT
