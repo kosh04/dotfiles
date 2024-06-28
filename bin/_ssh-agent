@@ -1,0 +1,23 @@
+#!/bin/sh
+# Run ssh-agent automatically
+# Usage: souce /path/to/_ssh-agent
+# TODO: When to kill ssh-agent process?
+
+start_ssh_agent() {
+    echo "Initialising new SSH agent..."
+    eval "$(ssh-agent)"
+    # NOTE: `man ssh` says..
+    # ssh reads ~/.ssh/environment, and adds env var "NAME=VALUE".
+    # sshd_config:PermitUserEnvironment=yes
+    (umask 066; cat <<EOF | tee "$HOME/.ssh/environment"
+SSH_AUTH_SOCK=${SSH_AUTH_SOCK}
+SSH_AGENT_PID=${SSH_AGENT_PID}
+EOF
+)
+}
+
+# Skip if process is already running
+#(test -n "${SSH_AGENT_PID}" && ps -p "${SSH_AGENT_PID}" >/dev/null) && return
+test -S "${SSH_AUTH_SOCK}" && return
+
+start_ssh_agent
