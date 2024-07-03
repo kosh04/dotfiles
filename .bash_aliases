@@ -16,7 +16,7 @@ alias tldr=cheat.sh
 # or `| cut -c1-256`
 
 if command -v ip &>/dev/null; then
-    alias ip='ip --color=auto'
+alias ip='ip --color=auto'
 fi
 
 # TODO: .config/youtube-dl/config
@@ -34,3 +34,19 @@ alias lynx-dump='lynx -dump'
 alias bind-functions='bind -p | egrep -v "^#|self-insert|do-lowercase-version|digit-argument" | sort'
 
 alias brokensymlinks='find . -type l -print0 | xargs -0 file | grep "broken symbolic link"'
+
+alias bash_is_interactive='[[ "$-" = *i* ]]'
+
+tmux-dwim() {
+    if tmux has-session 2>/dev/null
+    then
+	tmux attach-session
+    else
+	tmux
+    fi
+}
+alias tmux-prefix='tmux show-options -g prefix'
+
+ssh-keygen-ed25519() {
+	ssh-keygen -t ed25519 -C "$USER@$HOSTNAME,$(date +%F)" "$@"
+}
