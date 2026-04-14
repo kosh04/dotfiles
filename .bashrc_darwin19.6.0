@@ -40,4 +40,6 @@ gnubin() {
     PATH="$gpath:$PATH" "$@"
 }
 
-alias emacsclient=/Applications/Emacs.app/Contents/MacOS/bin/emacsclient
+PATH=$PATH:$HOME/.local/share/emacsformacosx/bin
+
+alias wakeonlan-macmini="wakeonlan 32:ad:8d:9f:d4:93"
