@@ -1,6 +1,7 @@
 #!/bin/sh
 set -eu
 
+# NOTE: --global -> ${XDG_CONFIG_HOME}/homebrew/Brewfile
 : "${BREWFILE:=$HOME/.config/homebrew/Brewfile}"
 
 usage="Usage: $0 [install|dump] env:BREWFILE=${BREWFILE}"

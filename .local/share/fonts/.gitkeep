@@ -1,0 +1,3 @@
+linux:
+macos: /System/Library/Fonts/, ~/Library/Fonts/
+windows:

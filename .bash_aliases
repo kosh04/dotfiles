@@ -48,5 +48,12 @@ tmux-dwim() {
 alias tmux-prefix='tmux show-options -g prefix'
 
 ssh-keygen-ed25519() {
-	ssh-keygen -t ed25519 -C "$USER@$HOSTNAME,$(date +%F)" "$@"
+	ssh-keygen -t ed25519 -C "${USER}@${HOSTNAME:-$HOST},$(date +%F)" "$@"
+}
+
+xtar() {
+    local url=$1
+    local file=$(basename $url)
+    echo wget $url
+    echo tar xvf $file
 }

@@ -34,6 +34,7 @@
 	tlog = log --stat --graph --pretty=format:'%C(green)%h%C(reset) (%ar) %s'
 	authors = shortlog -sne --no-merges
 	first = rev-list --max-parents=0 HEAD # e.g. git log FIRST
+	log-first-commit = !git first | git log --stdin
 	rename = mv
 	remove = rm
 	st = status -sb
@@ -45,13 +46,17 @@
 	root = rev-parse --show-toplevel
 	env = !env | grep ^GIT
 	ls = ls-files ':(glob)*'
+	discard = checkout --
+	commits = shortlog -sn --all # or rev-list --count HEAD
 	##### comit (or -C HEAD, --reuse-message=@)
 	amend = commit --amend --no-edit
 	undo = !git reset --hard HEAD@{1} && git clean -fd
 	##### branch (branch-current)
 	bc = rev-parse --abbrev-ref HEAD
+	new-branch = switch -c
 	## git -C /path/to/gitrepo tig ARGS...
 	tig = !tig
+	#exec = !exec
 	## GitK (or git-gui)
 	gitk = !gitk
 	## List all conflicted files. https://stackoverflow.com/q/3065650/4499880

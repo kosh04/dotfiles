@@ -4,6 +4,11 @@ echo 1>&2 "call .bashrc_$OSTYPE"
 
 eval "$(brew shellenv)"
 
+#$ brew upgrade pv
+#> curl: (60) SSL certificate problem: unable to get local issuer certificate
+#> More details here: https://curl.haxx.se/docs/sslcerts.html
+export HOMEBREW_FORCE_BREWED_CA_CERTIFICATES=1
+
 # NOTE: airport is deprecated since macOS Sonoma 14.4 (and use "wdutil")
 alias airport=/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport
 
